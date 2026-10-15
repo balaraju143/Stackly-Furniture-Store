@@ -1,0 +1,557 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f6f0e5">
+    <title>Stackly Furniture | Client Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/client-dashboard.css">
+</head>
+<body>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<aside class="sidebar" id="sidebar">
+   <a href="#overview" class="brand">
+    <img
+        src="assets/logo 4.webp"
+        alt="Stackly Furniture Logo"
+        class="brand-logo"
+    >
+</a>
+
+    <div class="customer-profile">
+        <div class="avatar" data-avatar>U</div>
+        <div class="customer-info">
+            <strong data-customer-name>Furniture Customer</strong>
+            <span data-customer-email>customer@example.com</span>
+            <small>VALUED CUSTOMER</small>
+        </div>
+    </div>
+
+    <p class="menu-heading">YOUR ACCOUNT</p>
+     
+<nav class="sidebar-nav" aria-label="Main dashboard navigation">
+
+    <a class="nav-link active" href="#overview" data-route="overview">
+        <span class="material-icons nav-symbol">dashboard</span>
+        <span>Overview</span>
+    </a>
+
+    <a class="nav-link" href="#my-orders" data-route="my-orders">
+        <span class="material-icons nav-symbol">receipt_long</span>
+        <span>My Orders</span>
+        <span class="nav-badge">2</span>
+    </a>
+
+    <a class="nav-link" href="#order-tracking" data-route="order-tracking">
+        <span class="material-icons nav-symbol">local_shipping</span>
+        <span>Order Tracking</span>
+    </a>
+
+    <a class="nav-link" href="#saved-items" data-route="saved-items">
+        <span class="material-icons nav-symbol">favorite_border</span>
+        <span>Saved Furniture</span>
+        <span class="nav-badge">6</span>
+    </a>
+
+    <a class="nav-link" href="#addresses" data-route="addresses">
+        <span class="material-icons nav-symbol">location_on</span>
+        <span>My Addresses</span>
+    </a>
+
+    <a class="nav-link" href="#payments" data-route="payments">
+        <span class="material-icons nav-symbol">payments</span>
+        <span>Payments</span>
+    </a>
+
+    <p class="menu-heading secondary-menu-heading">CUSTOMER SERVICES</p>
+
+    <a class="nav-link" href="#reviews" data-route="reviews">
+        <span class="material-icons nav-symbol">star_border</span>
+        <span>My Reviews</span>
+    </a>
+
+    <a class="nav-link" href="#rewards" data-route="rewards">
+        <span class="material-icons nav-symbol">card_giftcard</span>
+        <span>Rewards &amp; Offers</span>
+    </a>
+
+    <a class="nav-link" href="#support" data-route="support">
+        <span class="material-icons nav-symbol">support_agent</span>
+        <span>Help &amp; Support</span>
+    </a>
+
+    <p class="menu-heading secondary-menu-heading">PERSONAL</p>
+
+    <a class="nav-link" href="#profile" data-route="profile">
+        <span class="material-icons nav-symbol">person</span>
+        <span>My Profile</span>
+    </a>
+
+    <a class="nav-link" href="#settings" data-route="settings">
+        <span class="material-icons nav-symbol">settings</span>
+        <span>Account Settings</span>
+    </a>
+
+</nav>
+
+
+    <div class="sidebar-bottom">
+        <div class="sidebar-help">
+            <span class="help-icon">i</span>
+            <div>
+                <strong>Need assistance?</strong>
+                <p>We're here to help.</p>
+                <a href="404.html">Contact our team</a>
+            </div>
+        </div>
+
+        <a class="nav-link logout-link" href="login.html">
+            <span class="material-icons nav-symbol">logout</span>
+<span>Logout</span>
+        </a>
+        <p class="sidebar-version">STACKLY FURNITURE · 2026</p>
+    </div>
+</aside>
+
+<main class="main-content">
+    <header class="topbar">
+        <div class="topbar-left">
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Open navigation" aria-expanded="false">☰</button>
+            <div class="heading-group">
+                <h1 id="pageHeading">Overview</h1>
+                <p id="pageSubtitle">Your furniture account at a glance.</p>
+            </div>
+        </div>
+
+        <div class="topbar-actions">
+            <a class="search-link" href="404.html" aria-label="Search">
+                 <span class="material-icons search-icon">search</span>
+                <span class="search-text">Search your account...</span>
+            </a>
+            <a href="404.html" class="header-action" aria-label="Help">
+                  <span class="material-icons">help_outline</span>
+            </a>
+            <button class="header-avatar" data-avatar aria-label="Your profile">U</button>
+        </div>
+    </header>
+
+    <div class="page-content">
+
+        <!-- 01. OVERVIEW -->
+        <section class="dashboard-page active" id="overview"
+            data-title="Overview"
+            data-subtitle="Your furniture account at a glance.">
+
+            <div class="welcome-card">
+                <div class="welcome-content">
+                    <span class="eyebrow">YOUR HOME, YOUR STYLE</span>
+                    <h2>Welcome back, <span data-welcome-name>Customer</span>.</h2>
+                    <p>Your home journey starts here. Manage purchases, discover your saved pieces and keep everything organised in one place.</p>
+                    <div class="welcome-actions">
+                        <a href="404.html" class="btn btn-cream">Explore Collection</a>
+                        <a href="#my-orders" class="btn btn-outline-light">View My Orders</a>
+                    </div>
+                </div>
+                <div class="welcome-decoration" aria-hidden="true">
+                    <span class="decor-circle"></span>
+                    <span class="decor-line"></span>
+                    <span class="decor-square"></span>
+                </div>
+            </div>
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow dark-eyebrow">YOUR ACCOUNT</span>
+                    <h2>Everything at a glance</h2>
+                </div>
+                <p>A simple overview of your furniture shopping journey.</p>
+            </div>
+
+            <div class="stats-grid">
+                <article class="stat-card">
+                    <div class="stat-top">
+                       <span class="material-icons stat-icon">receipt_long</span>
+                        <span class="stat-tag">ORDERS</span></div>
+                    <strong class="stat-number">04</strong>
+                    <p>Total orders placed</p>
+                    <a href="#my-orders" class="text-link">View orders</a>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="material-icons stat-icon">favorite_border</span>
+                        <span class="stat-tag">SAVED ITEMS</span></div>
+                    <strong class="stat-number">06</strong>
+                    <p>Furniture pieces saved</p>
+                    <a href="#saved-items" class="text-link">View collection</a>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="material-icons stat-icon">location_searching</span>
+                        <span class="stat-tag">DELIVERY</span></div>
+                    <strong class="stat-number">01</strong>
+                    <p>Order being prepared</p>
+                    <a href="#order-tracking" class="text-link">Track order</a>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-top">
+                    <span class="material-icons stat-icon">auto_awesome</span>
+                        <span class="stat-tag">REWARDS</span></div>
+                    <strong class="stat-number">240</strong>
+                    <p>Demo reward points</p>
+                    <a href="#rewards" class="text-link">View rewards</a>
+                </article>
+            </div>
+
+            <div class="content-grid">
+                <section class="panel">
+                    <div class="panel-heading">
+                        <div><h3>Recent Orders</h3><p>Stay updated on your latest purchases.</p></div>
+                        <a href="#my-orders" class="btn btn-small btn-outline">View All</a>
+                    </div>
+                    <div class="order-row">
+                        <div class="order-symbol">01</div>
+                        <div class="order-info"><strong>Living Room Collection</strong><span>STK-2048 · Furniture set</span></div>
+                        <div class="order-meta"><strong>₹24,800</strong><span class="status status-progress">Processing</span></div>
+                    </div>
+                    <div class="order-row">
+                        <div class="order-symbol">02</div>
+                        <div class="order-info"><strong>Walnut Sideboard</strong><span>STK-1936 · Storage</span></div>
+                        <div class="order-meta"><strong>₹14,500</strong><span class="status status-complete">Delivered</span></div>
+                    </div>
+                    <div class="order-row">
+                        <div class="order-symbol">03</div>
+                        <div class="order-info"><strong>Accent Lounge Chair</strong><span>STK-1852 · Seating</span></div>
+                        <div class="order-meta"><strong>₹11,900</strong><span class="status status-complete">Delivered</span></div>
+                    </div>
+                </section>
+
+                <section class="panel account-progress">
+                    <div class="panel-heading"><div><h3>Profile Completion</h3><p>Keep your account up to date.</p></div></div>
+                    <div class="account-circle"><div><strong>80%</strong><span>Profile ready</span></div></div>
+                    <p class="account-message">Review your contact information and delivery details to make your next purchase easier.</p>
+                    <a href="#profile" class="btn btn-brown btn-full">Complete My Profile</a>
+                </section>
+            </div>
+
+            <section class="panel">
+                <div class="panel-heading">
+                    <div><span class="eyebrow dark-eyebrow">ROOM BY ROOM</span><h3>Make your space feel like home</h3><p>Discover collections designed for everyday living.</p></div>
+                    <a href="404.html" class="btn btn-brown">Explore Collection</a>
+                </div>
+                <div class="category-grid">
+                    <a href="404.html" class="category-card"><span class="category-number">01</span><strong>Living Room</strong><span>Comfort and connection</span></a>
+                    <a href="404.html" class="category-card"><span class="category-number">02</span><strong>Bedroom</strong><span>Rest and relaxation</span></a>
+                    <a href="404.html" class="category-card"><span class="category-number">03</span><strong>Dining Room</strong><span>Moments together</span></a>
+                    <a href="404.html" class="category-card"><span class="category-number">04</span><strong>Home Office</strong><span>Focus and function</span></a>
+                </div>
+            </section>
+
+            <section class="panel">
+                <div class="panel-heading"><div><h3>Account Quick Links</h3><p>Access your frequently used account features.</p></div></div>
+                <div class="quick-link-grid">
+                    <a href="#addresses" class="quick-link-card"><span class="material-icons">home</span><strong>Delivery Addresses</strong><small>Review saved details</small></a>
+                    <a href="#payments" class="quick-link-card"><span class="material-icons">payments</span><strong>Payment History</strong><small>Review transactions</small></a>
+                    <a href="#reviews" class="quick-link-card"><span class="material-icons">star_border</span><strong>My Reviews</strong><small>Share your experience</small></a>
+                    <a href="#support" class="quick-link-card"><span class="material-icons">help_outline</span><strong>Customer Support</strong><small>Get assistance</small></a>
+                </div>
+            </section>
+        </section>
+
+        <!-- 02. MY ORDERS -->
+        <section class="dashboard-page" id="my-orders"
+            data-title="My Orders"
+            data-subtitle="Manage purchases and review your order history.">
+
+            <div class="page-intro">
+                <span class="eyebrow dark-eyebrow">PURCHASE HISTORY</span>
+                <h2>Every order, organised.</h2>
+                <p>Review your furniture purchases, check order status and access assistance when you need it.</p>
+            </div>
+
+            <div class="stats-grid">
+                <article class="stat-card"><span class="stat-tag">TOTAL ORDERS</span><strong class="stat-number">04</strong><p>All purchases</p></article>
+                <article class="stat-card"><span class="stat-tag">PROCESSING</span><strong class="stat-number">01</strong><p>Being prepared</p></article>
+                <article class="stat-card"><span class="stat-tag">DELIVERED</span><strong class="stat-number">03</strong><p>Successfully delivered</p></article>
+                <article class="stat-card"><span class="stat-tag">CANCELLED</span><strong class="stat-number">00</strong><p>No demo cancellations</p></article>
+            </div>
+
+            <section class="panel">
+                <div class="panel-heading"><div><h3>Order History</h3><p>Sample records for the dashboard demonstration.</p></div><a href="404.html" class="btn btn-brown">Order Assistance</a></div>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Order ID</th><th>Furniture</th><th>Order Date</th><th>Amount</th><th>Status</th><th>Details</th></tr></thead>
+                        <tbody>
+                            <tr><td>STK-2048</td><td>Living Room Collection</td><td>22 Aug 2026</td><td>₹24,800</td><td><span class="status status-progress">Processing</span></td><td><a href="#order-tracking" class="btn btn-small btn-outline">Track</a></td></tr>
+                            <tr><td>STK-1936</td><td>Walnut Sideboard</td><td>14 Aug 2026</td><td>₹14,500</td><td><span class="status status-complete">Delivered</span></td><td><a href="404.html" class="btn btn-small btn-outline">Details</a></td></tr>
+                            <tr><td>STK-1852</td><td>Accent Lounge Chair</td><td>02 Aug 2026</td><td>₹11,900</td><td><span class="status status-complete">Delivered</span></td><td><a href="404.html" class="btn btn-small btn-outline">Details</a></td></tr>
+                            <tr><td>STK-1720</td><td>Oak Coffee Table</td><td>19 Jul 2026</td><td>₹7,600</td><td><span class="status status-complete">Delivered</span></td><td><a href="404.html" class="btn btn-small btn-outline">Details</a></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <div class="content-grid">
+                <section class="panel"><h3>Before your furniture arrives</h3><p>Ensure the delivery address is correct and that your room is ready for the new furniture.</p><div class="button-row"><a href="#addresses" class="btn btn-outline">Review Address</a><a href="#order-tracking" class="btn btn-brown">Track Current Order</a></div></section>
+                <section class="panel"><h3>Need an order update?</h3><p>For order changes, delivery questions or product assistance, visit customer support.</p><a href="404.html" class="btn btn-brown">Contact Support</a></section>
+            </div>
+        </section>
+
+        <!-- 03. ORDER TRACKING -->
+        <section class="dashboard-page" id="order-tracking"
+            data-title="Order Tracking"
+            data-subtitle="Follow your furniture order through each delivery stage.">
+
+            <div class="page-intro"><span class="eyebrow dark-eyebrow">DELIVERY JOURNEY</span><h2>Know where your order stands.</h2><p>Follow the progress of your latest furniture purchase from confirmation to delivery.</p></div>
+
+            <section class="panel tracking-summary">
+                <div><span class="eyebrow dark-eyebrow">CURRENT ORDER</span><h3>Living Room Collection</h3><p>Order ID: STK-2048</p><p>Order value: ₹24,800</p></div>
+                <span class="status status-progress">Processing</span>
+            </section>
+
+            <section class="panel">
+                <div class="panel-heading"><div><h3>Order Progress</h3><p>Illustrative order timeline for the demo dashboard.</p></div></div>
+                <div class="timeline">
+                    <div class="timeline-step completed"><span class="timeline-dot">✓</span><div><strong>Order Confirmed</strong><p>Your order has been received and confirmed.</p><small>22 August · 10:30 AM</small></div></div>
+                    <div class="timeline-step completed"><span class="timeline-dot">✓</span><div><strong>Payment Recorded</strong><p>The demo order payment has been recorded.</p><small>22 August · 10:35 AM</small></div></div>
+                    <div class="timeline-step current"><span class="timeline-dot">3</span><div><strong>Preparing Your Furniture</strong><p>Your order is being prepared for dispatch.</p><small>Current stage in this demo</small></div></div>
+                    <div class="timeline-step"><span class="timeline-dot">4</span><div><strong>Dispatched</strong><p>Delivery information will appear after dispatch.</p></div></div>
+                    <div class="timeline-step"><span class="timeline-dot">5</span><div><strong>Delivered</strong><p>Your furniture reaches its destination.</p></div></div>
+                </div>
+            </section>
+
+            <div class="content-grid">
+                <section class="panel"><h3>Delivery Address</h3><p data-address-name>Customer Name</p><p data-address-email>customer@example.com</p><p>Full delivery address will be available after address integration.</p><a href="#addresses" class="btn btn-outline">Manage Address</a></section>
+                <section class="panel"><h3>Delivery Assistance</h3><p>Have a question about delivery timing, installation or order status?</p><a href="404.html" class="btn btn-brown">Get Delivery Help</a></section>
+            </div>
+        </section>
+
+        <!-- 04. SAVED FURNITURE -->
+        <section class="dashboard-page" id="saved-items"
+            data-title="Saved Furniture"
+            data-subtitle="Keep the pieces you love close at hand.">
+
+            <div class="page-intro"><span class="eyebrow dark-eyebrow">YOUR PERSONAL COLLECTION</span><h2>Furniture worth remembering.</h2><p>Review your favourite styles and revisit the pieces you are considering for your home.</p></div>
+
+            <div class="stats-grid">
+                <article class="stat-card"><span class="stat-tag">SAVED PIECES</span><strong class="stat-number">06</strong><p>Demo wishlist items</p></article>
+                <article class="stat-card"><span class="stat-tag">ROOM CATEGORIES</span><strong class="stat-number">04</strong><p>Styles across your home</p></article>
+                <article class="stat-card"><span class="stat-tag">COLLECTION</span><strong class="stat-number">Personal</strong><p>Curated for your taste</p></article>
+                <article class="stat-card"><span class="stat-tag">NEXT STEP</span><strong class="stat-number">Explore</strong><p>Find your next favourite</p></article>
+            </div>
+
+            <div class="saved-grid">
+                <article class="saved-card"><div class="saved-art art-one"><span>01</span><strong>Living</strong></div><div class="saved-info"><span class="product-category">SOFA COLLECTION</span><h3>Marlow Sofa</h3><p>Soft upholstery and a timeless silhouette for relaxed evenings.</p><div class="product-bottom"><strong>₹24,800</strong><a href="404.html" class="btn btn-brown">View Item</a></div></div></article>
+                <article class="saved-card"><div class="saved-art art-two"><span>02</span><strong>Natural</strong></div><div class="saved-info"><span class="product-category">STORAGE</span><h3>Hollis Sideboard</h3><p>Warm wood character with useful everyday storage.</p><div class="product-bottom"><strong>₹14,750</strong><a href="404.html" class="btn btn-brown">View Item</a></div></div></article>
+                <article class="saved-card"><div class="saved-art art-three"><span>03</span><strong>Gather</strong></div><div class="saved-info"><span class="product-category">DINING</span><h3>Olea Dining Table</h3><p>A welcoming centrepiece for family meals and gatherings.</p><div class="product-bottom"><strong>₹24,800</strong><a href="404.html" class="btn btn-brown">View Item</a></div></div></article>
+                <article class="saved-card"><div class="saved-art art-four"><span>04</span><strong>Rest</strong></div><div class="saved-info"><span class="product-category">BEDROOM</span><h3>Linen Platform Bed</h3><p>Understated design with a relaxed, comfortable feel.</p><div class="product-bottom"><strong>₹28,400</strong><a href="404.html" class="btn btn-brown">View Item</a></div></div></article>
+                <article class="saved-card"><div class="saved-art art-five"><span>05</span><strong>Work</strong></div><div class="saved-info"><span class="product-category">HOME OFFICE</span><h3>Oak Writing Desk</h3><p>A practical workspace with a calm, natural finish.</p><div class="product-bottom"><strong>₹12,600</strong><a href="404.html" class="btn btn-brown">View Item</a></div></div></article>
+                <article class="saved-card"><div class="saved-art art-six"><span>06</span><strong>Unwind</strong></div><div class="saved-info"><span class="product-category">ACCENT SEATING</span><h3>Arden Lounge Chair</h3><p>A considered accent piece for reading and quiet moments.</p><div class="product-bottom"><strong>₹11,900</strong><a href="404.html" class="btn btn-brown">View Item</a></div></div></article>
+            </div>
+
+            <section class="panel"><h3>Build your next room</h3><p>Discover furniture for living, dining, sleeping and working in comfort.</p><a href="404.html" class="btn btn-brown">Explore Furniture</a></section>
+        </section>
+
+        <!-- 05. ADDRESSES -->
+        <section class="dashboard-page" id="addresses"
+            data-title="My Addresses"
+            data-subtitle="Organise your furniture delivery locations.">
+
+            <div class="page-intro"><span class="eyebrow dark-eyebrow">DELIVERY DETAILS</span><h2>Your addresses, in one place.</h2><p>Review delivery information and prepare your account for a smoother checkout.</p></div>
+
+            <div class="stats-grid">
+                <article class="stat-card"><span class="stat-tag">SAVED ADDRESSES</span><strong class="stat-number">01</strong><p>Demo primary address</p></article>
+                <article class="stat-card"><span class="stat-tag">DEFAULT LOCATION</span><strong class="stat-number">Home</strong><p>Primary delivery type</p></article>
+                <article class="stat-card"><span class="stat-tag">DELIVERY PROFILE</span><strong class="stat-number">Active</strong><p>Account information</p></article>
+                <article class="stat-card"><span class="stat-tag">ADDRESS STATUS</span><strong class="stat-number">Review</strong><p>Verify details before checkout</p></article>
+            </div>
+
+            <div class="address-grid">
+                <article class="address-card"><div class="address-heading"><span class="material-icons address-icon">home</span><span class="status status-complete">Default</span></div><h3>Home Address</h3><p data-address-name>Customer Name</p><p data-address-email>customer@example.com</p><p class="address-placeholder">Your complete street address, city, state and postal code will appear here when connected to your account.</p><a href="404.html" class="btn btn-outline">Edit Address</a></article>
+                <article class="address-card add-address"><span class="address-icon">+</span><h3>Add Another Address</h3><p>Keep home, work or another delivery location organised for future purchases.</p><a href="404.html" class="btn btn-brown">Add New Address</a></article>
+            </div>
+
+            <section class="panel"><h3>Furniture delivery checklist</h3><ul class="check-list"><li>Confirm your street address and postal code.</li><li>Make sure your contact details are current.</li><li>Check that furniture can be moved into your room safely.</li><li>Review delivery instructions before checkout.</li></ul><a href="#profile" class="btn btn-brown">Review My Profile</a></section>
+        </section>
+
+        <!-- 06. PAYMENTS -->
+        <section class="dashboard-page" id="payments"
+            data-title="Payments"
+            data-subtitle="Review payment records and purchase totals.">
+
+            <div class="page-intro"><span class="eyebrow dark-eyebrow">PAYMENT CENTRE</span><h2>Your purchases and payment history.</h2><p>Review the sample transaction records displayed for your furniture account.</p></div>
+
+            <div class="stats-grid">
+                <article class="stat-card"><span class="stat-tag">TOTAL PURCHASES</span><strong class="stat-number">₹58.8K</strong><p>Approximate demo total</p></article>
+                <article class="stat-card"><span class="stat-tag">RECORDED PAYMENTS</span><strong class="stat-number">04</strong><p>Sample transactions</p></article>
+                <article class="stat-card"><span class="stat-tag">PENDING PAYMENT</span><strong class="stat-number">₹0</strong><p>No demo balance pending</p></article>
+                <article class="stat-card"><span class="stat-tag">REFUNDS</span><strong class="stat-number">₹0</strong><p>No demo refunds recorded</p></article>
+            </div>
+
+            <section class="panel"><div class="panel-heading"><div><h3>Transaction History</h3><p>Illustrative data, not verified financial records.</p></div><a href="404.html" class="btn btn-outline">Payment Support</a></div>
+                <div class="table-wrap"><table><thead><tr><th>Transaction ID</th><th>Order ID</th><th>Method</th><th>Amount</th><th>Status</th><th>Receipt</th></tr></thead><tbody>
+                    <tr><td>PAY-8048</td><td>STK-2048</td><td>Online payment</td><td>₹24,800</td><td><span class="status status-progress">Processing</span></td><td><a href="404.html" class="btn btn-small btn-outline">Receipt</a></td></tr>
+                    <tr><td>PAY-7936</td><td>STK-1936</td><td>Online payment</td><td>₹14,500</td><td><span class="status status-complete">Recorded</span></td><td><a href="404.html" class="btn btn-small btn-outline">Receipt</a></td></tr>
+                    <tr><td>PAY-7852</td><td>STK-1852</td><td>Online payment</td><td>₹11,900</td><td><span class="status status-complete">Recorded</span></td><td><a href="404.html" class="btn btn-small btn-outline">Receipt</a></td></tr>
+                    <tr><td>PAY-7720</td><td>STK-1720</td><td>Online payment</td><td>₹7,600</td><td><span class="status status-complete">Recorded</span></td><td><a href="404.html" class="btn btn-small btn-outline">Receipt</a></td></tr>
+                </tbody></table></div>
+            </section>
+
+            <section class="panel"><h3>Payment safety</h3><p>For your security, this demo does not store card details or process real payments. Use the official checkout integration for actual transactions.</p><a href="404.html" class="btn btn-brown">Payment Assistance</a></section>
+        </section>
+
+        <!-- 07. REVIEWS -->
+        <section class="dashboard-page" id="reviews"
+            data-title="My Reviews"
+            data-subtitle="Keep track of the furniture experiences you share.">
+
+            <div class="page-intro"><span class="eyebrow dark-eyebrow">YOUR FEEDBACK</span><h2>Every experience matters.</h2><p>Review your submitted feedback and discover opportunities to share your experience with furniture purchases.</p></div>
+
+            <div class="stats-grid">
+                <article class="stat-card"><span class="stat-tag">REVIEWS SHARED</span><strong class="stat-number">02</strong><p>Sample review records</p></article>
+                <article class="stat-card"><span class="stat-tag">AVERAGE RATING</span><strong class="stat-number">4.5/5</strong><p>Demo rating only</p></article>
+                <article class="stat-card"><span class="stat-tag">AWAITING FEEDBACK</span><strong class="stat-number">01</strong><p>Example review reminder</p></article>
+                <article class="stat-card"><span class="stat-tag">COMMUNITY</span><strong class="stat-number">Active</strong><p>Your voice makes a difference</p></article>
+            </div>
+
+            <section class="panel"><div class="panel-heading"><div><h3>Your Submitted Reviews</h3><p>Example review cards for layout demonstration.</p></div></div>
+                <div class="review-row"><div class="review-rating">★★★★★</div><div class="review-body"><strong>Walnut Sideboard</strong><p>Example review: the natural finish and practical storage make this a versatile furniture choice.</p><small>Example review · 14 August 2026</small></div><span class="status status-complete">Published</span></div>
+                <div class="review-row"><div class="review-rating">★★★★☆</div><div class="review-body"><strong>Accent Lounge Chair</strong><p>Example review: a comfortable accent piece that suits a relaxed reading corner.</p><small>Example review · 02 August 2026</small></div><span class="status status-complete">Published</span></div>
+            </section>
+
+            <section class="panel"><h3>Share your next experience</h3><p>Once your next furniture purchase is delivered, you can share feedback through the connected review feature.</p><a href="404.html" class="btn btn-brown">Write a Review</a></section>
+        </section>
+
+        <!-- 08. REWARDS -->
+        <section class="dashboard-page" id="rewards"
+            data-title="Rewards & Offers"
+            data-subtitle="Explore your loyalty information and available offers.">
+
+            <div class="welcome-card rewards-banner"><div class="welcome-content"><span class="eyebrow">STACKLY CUSTOMER REWARDS</span><h2>A little more value for your home.</h2><p>Discover loyalty benefits, seasonal offers and ideas for making your furniture budget go further.</p><a href="404.html" class="btn btn-cream">Explore Offers</a></div><div class="reward-emblem" aria-hidden="true">S</div></div>
+
+            <div class="stats-grid">
+                <article class="stat-card"><span class="stat-tag">DEMO POINTS</span><strong class="stat-number">240</strong><p>Illustrative reward balance</p></article>
+                <article class="stat-card"><span class="stat-tag">MEMBER LEVEL</span><strong class="stat-number">Classic</strong><p>Example member tier</p></article>
+                <article class="stat-card"><span class="stat-tag">SAVED OFFERS</span><strong class="stat-number">02</strong><p>Example offers</p></article>
+                <article class="stat-card"><span class="stat-tag">MEMBER STATUS</span><strong class="stat-number">Active</strong><p>Demo account status</p></article>
+            </div>
+
+            <section class="panel"><div class="panel-heading"><div><h3>Featured Offers</h3><p>Example promotional cards; no discount is automatically applied.</p></div></div>
+                <div class="offer-grid">
+                    <article class="offer-card"><span class="offer-label">SEASONAL</span><h3>Refresh Your Living Room</h3><p>Explore new seating and thoughtfully designed accent furniture.</p><a href="404.html" class="btn btn-brown">View Collection</a></article>
+                    <article class="offer-card"><span class="offer-label">HOME ESSENTIALS</span><h3>Everyday Organisation</h3><p>Find storage pieces to help keep your home calm and organised.</p><a href="404.html" class="btn btn-brown">Explore Storage</a></article>
+                </div>
+            </section>
+
+            <section class="panel"><h3>Rewards programme information</h3><p>The reward balance and offers shown here are demo content. Connect your loyalty API to calculate actual points, membership eligibility and redeemable benefits.</p><a href="404.html" class="btn btn-outline">Rewards Assistance</a></section>
+        </section>
+
+        <!-- 09. SUPPORT -->
+        <section class="dashboard-page" id="support"
+            data-title="Help & Support"
+            data-subtitle="Find assistance with your furniture account and purchases.">
+
+            <div class="page-intro"><span class="eyebrow dark-eyebrow">WE ARE HERE TO HELP</span><h2>How can we assist you?</h2><p>Find support for order status, delivery details, payments, product care and your account.</p></div>
+
+             
+<div class="support-grid">
+    <a href="404.html" class="support-card">
+        <span class="material-icons support-icon">receipt_long</span>
+        <h3>Orders &amp; Tracking</h3>
+        <p>Questions about order status, confirmation or delivery progress.</p>
+        <span class="btn btn-outline">Get Order Help</span>
+    </a>
+
+    <a href="404.html" class="support-card">
+        <span class="material-icons support-icon">local_shipping</span>
+        <h3>Delivery &amp; Assembly</h3>
+        <p>Get assistance with delivery instructions and furniture setup.</p>
+        <span class="btn btn-outline">Delivery Help</span>
+    </a>
+
+    <a href="404.html" class="support-card">
+        <span class="material-icons support-icon">payments</span>
+        <h3>Payments &amp; Billing</h3>
+        <p>Questions about transaction records, checkout or receipts.</p>
+        <span class="btn btn-outline">Payment Help</span>
+    </a>
+
+    <a href="404.html" class="support-card">
+        <span class="material-icons support-icon">person</span>
+        <h3>Account Assistance</h3>
+        <p>Get help with your profile, contact information and settings.</p>
+        <span class="btn btn-outline">Account Help</span>
+    </a>
+</div>
+
+            <section class="panel"><div class="panel-heading"><div><h3>Frequently Asked Questions</h3><p>Quick answers to common furniture shopping questions.</p></div></div>
+                <details class="faq-item"><summary>How can I check my order status?</summary><p>Open My Orders and select the tracking option for an available order. Live status requires integration with your order management system.</p></details>
+                <details class="faq-item"><summary>Can I change my delivery address?</summary><p>Review My Addresses. Address changes for existing orders may require assistance and depend on the delivery stage.</p></details>
+                <details class="faq-item"><summary>Where can I find my payment receipt?</summary><p>Open Payments to review transaction records. Real receipts should be generated by your payment or order service.</p></details>
+                <details class="faq-item"><summary>How do I report a damaged item?</summary><p>Use the connected support process and provide the relevant order number and details of the issue.</p></details>
+                <details class="faq-item"><summary>How can I update my account details?</summary><p>Open My Profile to review the information currently associated with your account.</p></details>
+            </section>
+
+            <section class="panel support-contact"><div><h3>Still need help?</h3><p>Our support team can help with questions about your furniture journey.</p></div><a href="404.html" class="btn btn-brown">Contact Support</a></section>
+        </section>
+
+        <!-- 10. PROFILE -->
+        <section class="dashboard-page" id="profile"
+            data-title="My Profile"
+            data-subtitle="Review the personal details associated with your account.">
+
+            <div class="page-intro"><span class="eyebrow dark-eyebrow">PERSONAL INFORMATION</span><h2>Your profile, your details.</h2><p>Review your recognised customer identity and contact information.</p></div>
+
+            <section class="panel profile-panel">
+                <div class="profile-cover"></div>
+                <div class="profile-identity"><div class="avatar avatar-large" data-avatar>U</div><div><h3 data-customer-name>Furniture Customer</h3><p data-customer-email>customer@example.com</p><span class="status status-complete">Customer Account</span></div></div>
+                <div class="profile-details-grid">
+                    <div class="profile-detail"><span>DISPLAY NAME</span><strong data-customer-name>Furniture Customer</strong></div>
+                    <div class="profile-detail"><span>EMAIL ADDRESS</span><strong data-customer-email>customer@example.com</strong></div>
+                    <div class="profile-detail"><span>ACCOUNT TYPE</span><strong>Furniture Customer</strong></div>
+                    <div class="profile-detail"><span>PROFILE STATUS</span><strong>Active demo profile</strong></div>
+                </div>
+                <p class="form-note">This dashboard reads the email and name available in local browser storage or the URL. Connect your authentication backend for verified customer details.</p>
+                <a href="404.html" class="btn btn-brown">Edit Profile</a>
+            </section>
+
+            <div class="content-grid">
+                <section class="panel"><h3>Contact Information</h3><p>Keep your email and contact details accurate so order-related communications reach you.</p><a href="404.html" class="btn btn-outline">Update Contact Details</a></section>
+                <section class="panel"><h3>Delivery Preferences</h3><p>Review the address associated with your furniture deliveries.</p><a href="#addresses" class="btn btn-brown">Manage Addresses</a></section>
+            </div>
+        </section>
+
+        <!-- 11. SETTINGS -->
+        <section class="dashboard-page" id="settings"
+            data-title="Account Settings"
+            data-subtitle="Manage your preferences, privacy and account access.">
+
+            <div class="page-intro"><span class="eyebrow dark-eyebrow">ACCOUNT PREFERENCES</span><h2>Settings for a better experience.</h2><p>Review your account preferences and find the right place to manage your information.</p></div>
+
+            <section class="panel settings-section">
+                <div class="settings-item"><div><h3>Personal Information</h3><p>Review your customer name and email address.</p></div><a href="#profile" class="btn btn-outline">View Profile</a></div>
+                <div class="settings-item"><div><h3>Delivery Addresses</h3><p>Manage your preferred delivery location.</p></div><a href="#addresses" class="btn btn-outline">Manage Addresses</a></div>
+                <div class="settings-item"><div><h3>Payment Records</h3><p>Review your sample payment history and transaction support.</p></div><a href="#payments" class="btn btn-outline">View Payments</a></div>
+                <div class="settings-item"><div><h3>Privacy & Security</h3><p>Access the connected account security and privacy controls.</p></div><a href="404.html" class="btn btn-outline">Security Settings</a></div>
+                <div class="settings-item"><div><h3>Communication Preferences</h3><p>Manage marketing and order notification preferences when available.</p></div><a href="404.html" class="btn btn-outline">Preferences</a></div>
+                <div class="settings-item"><div><h3>Account Assistance</h3><p>Ask for help with account access or profile changes.</p></div><a href="#support" class="btn btn-brown">Get Support</a></div>
+            </section>
+
+            <section class="panel security-note"><span class="support-icon">✓</span><div><h3>Protect your account</h3><p>Never share your password or verification codes. Use your application's secure authentication process for account changes.</p></div></section>
+        </section>
+
+        <footer class="dashboard-footer">
+            <span>© 2026 Stackly Furniture. Thoughtfully made for your home.</span>
+            <nav aria-label="Footer navigation"><a href="404.html">Privacy Policy</a><a href="404.html">Terms of Service</a><a href="#support">Support</a></nav>
+        </footer>
+
+    </div>
+</main>
+
+<script src="js/client-dashboard.js" defer></script>
+</body>
+</html>

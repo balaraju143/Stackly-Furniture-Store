@@ -1,0 +1,908 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Stackly Furniture | Modern Living</title>
+
+    <meta name="description" content="Discover elegant furniture and timeless designs for your home.">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap"
+      rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/collections.css">
+</head>
+
+<body>
+
+    
+<!-- Premium Stackly Page Loader -->
+<div class="stackly-loader" id="stacklyLoader">
+    <div class="loader-content">
+
+        <div class="loader-logo">
+    <img
+        src="assets/black-logo.webp"
+        alt="Stackly Furniture"
+        class="loader-logo-image"
+    >
+</div>
+
+        <div class="loader-visual">
+            <div class="loader-orbit orbit-one"></div>
+            <div class="loader-orbit orbit-two"></div>
+
+            <div class="loader-chair">
+                <span class="material-icons">weekend</span>
+            </div>
+
+            <span class="loader-spark spark-one">✦</span>
+            <span class="loader-spark spark-two">✧</span>
+            <span class="loader-spark spark-three">✦</span>
+        </div>
+
+        <h2 class="loader-title">Comfort in every detail</h2>
+        <p class="loader-subtitle">Preparing your space beautifully</p>
+
+        <div class="loader-progress">
+            <span id="loaderProgressBar"></span>
+        </div>
+
+        <div class="loader-bottom">
+            <span>THOUGHTFULLY DESIGNED</span>
+            <span id="loaderPercentage">00%</span>
+        </div>
+
+    </div>
+</div>
+
+
+
+    <!-- HEADER -->
+    <header class="navbar" id="navbar">
+
+        <!-- Logo -->
+        <a href="index.html" class="nav-logo" aria-label="Stackly Home">
+            <img
+                src="assets/black-logo.webp"
+                alt="Stackly Furniture"
+                class="logo-image"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex';">
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav" aria-label="Main navigation">
+            <ul class="nav-links">
+                <li><a href="index.html" data-page="home">Home</a></li>
+                <li><a href="shop.html" data-page="shop">Shop</a></li>
+                <li><a href="collections.html" data-page="collections">Collections</a></li>
+                <li><a href="inspiration.html" data-page="inspiration">Inspiration</a></li>
+                <li><a href="contact.html" data-page="contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Desktop Icons: Hidden on Mobile -->
+        <div class="nav-actions">
+            <a href="404.html" class="nav-icon" aria-label="Search">
+                <span class="material-symbols-outlined">search</span>
+            </a>
+
+            <a href="404.html" class="nav-icon" aria-label="Wishlist">
+                <span class="material-symbols-outlined">favorite_border</span>
+                <span class="icon-count">0</span>
+            </a>
+
+            <a href="404.html" class="nav-icon" aria-label="Shopping bag">
+                <span class="material-symbols-outlined">shopping_bag</span>
+                <span class="icon-count">0</span>
+            </a>
+
+            <a href="login.html" class="login-btn">Login</a>
+        </div>
+
+ <!-- Mobile Toggle -->
+       
+    <button
+    class="menu-toggle"
+    id="menuToggle"
+    type="button"
+    aria-label="Open navigation menu"
+    aria-controls="mobileMenu"
+    aria-expanded="false">
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+   </button>
+
+    </header>
+
+    <!-- MOBILE FULL-SCREEN MENU -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true" inert>
+
+        <nav class="mobile-nav" aria-label="Mobile navigation">
+
+            <ul class="mobile-menu-links">
+                <li><a href="index.html" data-page="home">Home</a></li>
+                <li><a href="shop.html" data-page="shop">Shop</a></li>
+                <li><a href="collections.html" data-page="collections">Collections</a></li>
+                <li><a href="inspiration.html" data-page="inspiration">Inspiration</a></li>
+                <li><a href="contact.html" data-page="contact">Contact</a></li>
+            </ul>
+
+            <a href="login.html" class="mobile-menu-login">Login</a>
+
+            <!-- Mobile menu icons -->
+            <div class="mobile-menu-icons">
+                <a href="404.html" aria-label="Search">
+                    <span class="material-symbols-outlined">search</span>
+                </a>
+
+                <a href="404.html" aria-label="Wishlist">
+                    <span class="material-symbols-outlined">favorite_border</span>
+                </a>
+
+                <a href="404.html" aria-label="Shopping bag">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                </a>
+            </div>
+
+        </nav>
+    </div>
+
+<!-- COLLECTIONS HERO -->
+<section class="collections-hero">
+
+    <div class="collections-slider">
+
+        <!-- SLIDE 1 -->
+        <div class="collection-slide active">
+            <div class="collection-image">
+                <img src="assets/collection-living-room.webp"
+                     alt="Elegant Stackly living room furniture">
+            </div>
+
+            <div class="collection-content">
+                <span class="collection-label">THE STACKLY COLLECTION</span>
+                <h1>Designed as a Collection.<br> Loved as a Home.</h1>
+                <p>
+                    Each Stackly collection is a complete world:
+                    one mood, one material story, and pieces made
+                    to sit together. Step into the one that feels
+                    like yours.
+                </p>
+            </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="collection-slide">
+            <div class="collection-image">
+                <img src="assets/collection-living-room.webp"
+                     alt="Modern furniture collection for a beautiful home">
+            </div>
+
+            <div class="collection-content">
+                <span class="collection-label">TIMELESS BY DESIGN</span>
+                <h1>Thoughtfully Made.<br>Beautifully Lived.</h1>
+                <p>
+                    Discover furniture that brings warmth,
+                    natural textures, and effortless elegance
+                    into every corner of your home.
+                </p>
+            </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="collection-slide">
+            <div class="collection-image">
+                <img src="assets/collection-living-room.webp"
+                     alt="Natural tones and refined furniture">
+            </div>
+
+            <div class="collection-content">
+                <span class="collection-label">FIND YOUR OWN STYLE</span>
+                <h1>Make Room for<br>What Matters.</h1>
+                <p>
+                    From inviting living spaces to quiet personal
+                    corners, explore thoughtfully curated pieces
+                    that make your home feel uniquely yours.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STACKLY COLLECTIONS -->
+<section class="stackly-collections" id="collections">
+
+    <div class="collections-inner">
+
+        <!-- SECTION HEADER -->
+        <div class="collections-header">
+            <div class="collections-heading-content">
+                <span class="collections-label">CURATED BY STACKLY</span>
+                <h2>Our collections<span>.</span></h2>
+
+                <p>
+                    Every Stackly collection is thoughtfully designed
+                    as a whole, bringing furniture, materials, and
+                    finishes together to create a home that feels
+                    beautifully yours.
+                </p>
+            </div>
+
+            <!-- FUNCTIONAL CATEGORY FILTERS -->
+            <div class="collection-filters" role="group"
+                 aria-label="Filter furniture collections">
+
+                <button class="collection-filter active"
+                        type="button" data-filter="all"
+                        aria-pressed="true">All</button>
+
+                <button class="collection-filter"
+                        type="button" data-filter="living"
+                        aria-pressed="false">Living</button>
+
+                <button class="collection-filter"
+                        type="button" data-filter="dining"
+                        aria-pressed="false">Dining</button>
+
+                <button class="collection-filter"
+                        type="button" data-filter="bedroom"
+                        aria-pressed="false">Bedroom</button>
+            </div>
+        </div>
+
+        <!-- COLLECTION CARDS -->
+        <div class="collections-cards">
+
+            <!-- 1. LIVING -->
+            <article class="collection-card" data-category="living">
+                <a href="404.html" class="collection-card-link"
+                   aria-label="Explore Fenwick living collection">
+
+                    <div class="collection-card-image">
+                        <img src="assets/collection-fenwick.webp"
+                             alt="Fenwick neutral upholstered sofa"
+                             loading="lazy">
+                    </div>
+
+                    <div class="collection-card-info">
+                        <h3>Fenwick</h3>
+                        <p>Deep-seat sofas in boiled wool, with oak legs.</p>
+
+                        <div class="collection-card-meta">
+                            <span>14 pieces</span>
+                            <span>From ₹68,000</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- 2. DINING -->
+            <article class="collection-card" data-category="dining">
+                <a href="404.html" class="collection-card-link"
+                   aria-label="Explore Tamarind dining collection">
+
+                    <div class="collection-card-image">
+                        <img src="assets/collection-tamarind.webp"
+                             alt="Tamarind teak and cane dining furniture"
+                             loading="lazy">
+                    </div>
+
+                    <div class="collection-card-info">
+                        <h3>Tamarind</h3>
+                        <p>Curved-back dining chairs in teak and cane.</p>
+
+                        <div class="collection-card-meta">
+                            <span>9 pieces</span>
+                            <span>From ₹8,000</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- 3. DINING -->
+            <article class="collection-card" data-category="dining">
+                <a href="404.html" class="collection-card-link"
+                   aria-label="Explore Longhouse dining collection">
+
+                    <div class="collection-card-image">
+                        <img src="assets/collection-longhouse.webp"
+                             alt="Longhouse dining table and chairs"
+                             loading="lazy">
+                    </div>
+
+                    <div class="collection-card-info">
+                        <h3>Longhouse</h3>
+                        <p>Trestle tables that seat four to ten.</p>
+
+                        <div class="collection-card-meta">
+                            <span>8 pieces</span>
+                            <span>From ₹58,000</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- 4. BEDROOM -->
+            <article class="collection-card" data-category="bedroom">
+                <a href="404.html" class="collection-card-link"
+                   aria-label="Explore Willow Bed collection">
+
+                    <div class="collection-card-image">
+                        <img src="assets/collection-willow-bed.webp"
+                             alt="Willow upholstered bed with slatted headboard"
+                             loading="lazy">
+                    </div>
+
+                    <div class="collection-card-info">
+                        <h3>Willow Bed</h3>
+                        <p>Low platform beds with a slatted headboard.</p>
+
+                        <div class="collection-card-meta">
+                            <span>8 pieces</span>
+                            <span>From ₹72,000</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- 5. LIVING -->
+            <article class="collection-card" data-category="living">
+                <a href="404.html" class="collection-card-link"
+                   aria-label="Explore Stacked collection">
+
+                    <div class="collection-card-image">
+                        <img src="assets/collection-stacked.webp"
+                             alt="Stacked modular shelving and home accessories"
+                             loading="lazy">
+                    </div>
+
+                    <div class="collection-card-info">
+                        <h3>Stacked</h3>
+                        <p>Modular shelving you can add to over time.</p>
+
+                        <div class="collection-card-meta">
+                            <span>11 pieces</span>
+                            <span>From ₹18,000</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- 6. LIVING -->
+            <article class="collection-card" data-category="living">
+                <a href="404.html" class="collection-card-link"
+                   aria-label="Explore Lantern lighting collection">
+
+                    <div class="collection-card-image">
+                        <img src="assets/collection-lantern.webp"
+                             alt="Lantern table lamp with warm brass finish"
+                             loading="lazy">
+                    </div>
+
+                    <div class="collection-card-info">
+                        <h3>Lantern</h3>
+                        <p>Floor and table lamps with hand-spun brass.</p>
+
+                        <div class="collection-card-meta">
+                            <span>8 pieces</span>
+                            <span>From ₹58,000</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- NEW SEASON COLLECTION -->
+<section class="new-season-section">
+    <div class="new-season-container">
+
+        <!-- LEFT CONTENT -->
+        <div class="new-season-content">
+
+            <span class="new-season-label">
+                <span class="new-season-dot"></span>
+                NEW ARRIVALS · STACKLY
+            </span>
+
+            <h2>
+                New this season:<br>
+                fenwick
+            </h2>
+
+            <p class="new-season-description">
+                A sofa that sits low, seats deep and wears in rather
+                than out. Choose from three lengths and eleven wool
+                colours to find the perfect fit for your home.
+            </p>
+
+            <div class="new-season-features">
+
+                <div class="new-season-feature">
+                    <span class="material-symbols-outlined">
+                        arrow_forward
+                    </span>
+                    <p>Kiln-dried frame with a 15-year guarantee</p>
+                </div>
+
+                <div class="new-season-feature">
+                    <span class="material-symbols-outlined">
+                        arrow_forward
+                    </span>
+                    <p>Removable covers you can wash or replace</p>
+                </div>
+
+                <div class="new-season-feature">
+                    <span class="material-symbols-outlined">
+                        arrow_forward
+                    </span>
+                    <p>Free fabric swatches, delivered in two days</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="new-season-visual">
+            <div class="new-season-image-wrap">
+                <img
+                    src="assets/new-fenewick-img.webp"
+                    alt="Stackly Fenwick furniture collection in a warm modern interior"
+                    class="new-season-image"
+                    loading="lazy"
+                >
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ==========================================
+     WHY CHOOSE STACKLY SECTION
+========================================== -->
+
+<section class="why-stackly" id="why-stackly">
+
+    <div class="why-stackly-inner">
+
+        <!-- Centered Section Heading -->
+        <div class="why-stackly-header">
+            <span class="why-stackly-eyebrow">THE STACKLY DIFFERENCE</span>
+
+            <h2>
+                Why people choose <span>Stackly</span>
+            </h2>
+
+            <p>
+                Good furniture should be easy to love on day one
+                and on day four thousand. We combine thoughtful
+                design, honest materials, and lasting craftsmanship
+                to make every space feel like home.
+            </p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="why-stackly-content">
+
+            <!-- Left Furniture Illustration -->
+            <div class="why-stackly-visual">
+
+                <div class="why-stackly-image-wrap">
+                    <img
+                        src="assets/chair-materials.webp"
+                        alt="Exploded furniture chair illustration showing its materials and construction"
+                        class="why-stackly-image"
+                        loading="lazy">
+                </div>
+
+                
+            </div>
+
+            <!-- Right Feature Cards -->
+            <div class="why-stackly-grid">
+
+                <!-- Card 1 -->
+                <article class="why-stackly-card card-left">
+
+                    <div class="why-stackly-icon">
+                        <span class="material-symbols-outlined">
+                            design_services
+                        </span>
+                    </div>
+
+                    <h3>Thoughtful Design</h3>
+
+                    <p>
+                        Proportions drawn around real rooms and real
+                        bodies, not showroom floors. Every detail has
+                        a purpose.
+                    </p>
+
+                </article>
+
+                <!-- Card 2 -->
+                <article class="why-stackly-card card-right">
+
+                    <div class="why-stackly-icon">
+                        <span class="material-symbols-outlined">
+                            diamond
+                        </span>
+                    </div>
+
+                    <h3>Premium Materials</h3>
+
+                    <p>
+                        Solid walnut, FSC-certified oak, full-grain
+                        leather, and carefully selected washable
+                        fabrics.
+                    </p>
+
+                </article>
+
+                <!-- Card 3 -->
+                <article class="why-stackly-card card-left">
+
+                    <div class="why-stackly-icon">
+                        <span class="material-symbols-outlined">
+                            eco
+                        </span>
+                    </div>
+
+                    <h3>Sustainable Craftsmanship</h3>
+
+                    <p>
+                        Responsibly sourced materials, thoughtful
+                        production, and durable finishes made for
+                        everyday living.
+                    </p>
+
+                </article>
+
+                <!-- Card 4 -->
+                <article class="why-stackly-card card-right">
+
+                    <div class="why-stackly-icon">
+                        <span class="material-symbols-outlined">
+                            local_shipping
+                        </span>
+                    </div>
+
+                    <h3>Easy Delivery</h3>
+
+                    <p>
+                        Convenient delivery, careful handling,
+                        and a straightforward experience from
+                        checkout to your home.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- STACKLY TESTIMONIALS -->
+<section class="stackly-testimonials" id="testimonials">
+    <div class="testimonials-container">
+
+        <div class="testimonials-heading">
+            <span class="testimonials-label">THE STACKLY EXPERIENCE</span>
+            <h2>Stories from our customers<span>.</span></h2>
+            <p>
+                Beautiful furniture is just the beginning.
+                Discover what our customers say about bringing
+                comfort, thoughtful design, and timeless style home.
+            </p>
+        </div>
+
+        <div class="testimonials-grid">
+
+            <!-- TESTIMONIAL 1 -->
+            <article class="testimonial-card testimonial-left">
+                <div class="testimonial-avatar">
+                    <img src="assets/client1 (1).webp"
+                         alt="Stackly customer Vino" loading="lazy">
+                </div>
+                <div class="testimonial-body">
+                    <p class="testimonial-quote">
+                        Finding furniture that feels both beautiful
+                        and comfortable was important to me. Stackly
+                        made the entire experience effortless, and
+                        every detail feels thoughtfully considered.
+                    </p>
+                    <span class="testimonial-name">@vino</span>
+                </div>
+            </article>
+
+            <!-- TESTIMONIAL 2 -->
+            <article class="testimonial-card testimonial-right">
+                <div class="testimonial-avatar">
+                    <img src="assets/client2 (1).webp"
+                         alt="Stackly customer Sham" loading="lazy">
+                </div>
+                <div class="testimonial-body">
+                    <p class="testimonial-quote">
+                        The quality and finish exceeded my expectations.
+                        The furniture fits beautifully into our home,
+                        and the natural materials make the whole space
+                        feel warm and welcoming.
+                    </p>
+                    <span class="testimonial-name">@sham</span>
+                </div>
+            </article>
+
+            <!-- TESTIMONIAL 3 -->
+            <article class="testimonial-card testimonial-left">
+                <div class="testimonial-avatar">
+                    <img src="assets/client3 (1).webp"
+                         alt="Stackly customer Sharma" loading="lazy">
+                </div>
+                <div class="testimonial-body">
+                    <p class="testimonial-quote">
+                        From browsing the collections to choosing
+                        the perfect pieces, everything felt simple.
+                        I love how the furniture combines modern
+                        design with timeless character.
+                    </p>
+                    <span class="testimonial-name">@Sharma</span>
+                </div>
+            </article>
+
+            <!-- TESTIMONIAL 4 -->
+            <article class="testimonial-card testimonial-right">
+                <div class="testimonial-avatar">
+                    <img src="assets/client4 (1).webp"
+                         alt="Stackly customer Jai" loading="lazy">
+                </div>
+                <div class="testimonial-body">
+                    <p class="testimonial-quote">
+                        I wanted pieces that would make my living room
+                        feel special without making it feel crowded.
+                        The collection helped me create a space that
+                        feels relaxed, personal, and inviting.
+                    </p>
+                    <span class="testimonial-name">@jai</span>
+                </div>
+            </article>
+
+            <!-- TESTIMONIAL 5 -->
+            <article class="testimonial-card testimonial-left">
+                <div class="testimonial-avatar">
+                    <img src="assets/client5 (1).webp"
+                         alt="Stackly customer Sam" loading="lazy">
+                </div>
+                <div class="testimonial-body">
+                    <p class="testimonial-quote">
+                        The textures, colors, and craftsmanship work
+                        together beautifully. Each piece feels carefully
+                        selected, and the result is a home that feels
+                        comfortable every single day.
+                    </p>
+                    <span class="testimonial-name">@Sam</span>
+                </div>
+            </article>
+
+            <!-- TESTIMONIAL 6 -->
+            <article class="testimonial-card testimonial-right">
+                <div class="testimonial-avatar">
+                    <img src="assets/client6 (1).webp"
+                         alt="Stackly customer Thau" loading="lazy">
+                </div>
+                <div class="testimonial-body">
+                    <p class="testimonial-quote">
+                        I love the understated style and thoughtful
+                        details. The furniture brings the room together
+                        without overpowering it, creating the calm,
+                        elegant atmosphere I wanted.
+                    </p>
+                    <span class="testimonial-name">@thau</span>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ==========================================
+     STACKLY FURNITURE FOOTER
+========================================== -->
+
+<footer class="furniture-footer" id="furniture-footer">
+
+    <!-- Newsletter Section -->
+    <div class="footer-newsletter footer-reveal">
+
+        <div class="footer-newsletter-heading">
+            <h2>Bring Better Design<br>Home.</h2>
+        </div>
+
+        <div class="footer-newsletter-content">
+            <p class="footer-newsletter-description">
+                Join the letter for new collections, styling notes and
+                early access. Twice a month, never more.
+            </p>
+
+            <form class="footer-newsletter-form" id="footerNewsletter"
+                  novalidate>
+
+                <div class="footer-form-controls">
+                    <input
+                        type="email"
+                        id="footerEmail"
+                        name="email"
+                        placeholder="Your email address"
+                        aria-label="Your email address"
+                        autocomplete="email"
+                        required>
+
+                    <button type="submit" class="footer-subscribe-btn">
+                        Subscribe
+                    </button>
+                </div>
+
+                <p class="footer-form-message"
+                   id="footerFormMessage"
+                   role="alert"
+                   aria-live="polite"></p>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <!-- Main Footer Content -->
+    <div class="footer-main">
+
+        <!-- Brand -->
+        <div class="footer-brand footer-reveal">
+
+  <a href="index.html" class="footer-logo" aria-label="Stackly home">
+    <img
+        src="assets/black-logo.webp"
+        alt="Stackly"
+        class="footer-logo-image"
+    >
+   </a>
+            <p class="footer-brand-description">
+                Contemporary furniture, warmly made.<br>
+                Showroom open daily, 10am to 7pm.
+            </p>
+
+<div class="footer-socials">
+
+    <a href="404.html" class="footer-social footer-google"
+       aria-label="Google" title="Google">
+        <i class="fa-brands fa-google"></i>
+    </a>
+
+    <a href="404.html" class="footer-social footer-facebook"
+       aria-label="Facebook" title="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+    <a href="404.html" class="footer-social footer-instagram"
+       aria-label="Instagram" title="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="404.html" class="footer-social footer-x"
+       aria-label="X" title="X">
+        <i class="fa-brands fa-x-twitter"></i>
+    </a>
+
+</div>
+
+</div>
+
+        <!-- Main Links -->
+        <nav class="footer-column footer-reveal"
+             aria-label="Main links">
+
+            <h3>Links</h3>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="inspiration.html">Inspiration</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Help Links -->
+        <nav class="footer-column footer-reveal"
+             aria-label="Customer help">
+
+            <h3>Help</h3>
+
+            <ul>
+                <li><a href="404.html">Shipping</a></li>
+                <li><a href="404.html">Returns</a></li>
+                <li><a href="404.html">Skin consultation</a></li>
+                <li><a href="404.html">Gift cards</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contact Details -->
+        <div class="footer-contact footer-reveal">
+
+            <h3>Contact us</h3>
+
+            <address>
+                Evolve Studio, 4th Floor,<br>
+                Khata No 10, Begur - Koppa Rd,<br>
+                In front of SNN Raj Serenity,<br>
+                Suraksha Nagar, Yelenahalli,<br>
+                Begur, Bengaluru,<br>
+                Karnataka - 560068
+            </address>
+
+          <a href="404.html" class="footer-contact-link">
+    <span class="material-icons" aria-hidden="true">mail</span>
+    <span>info@stackly.com</span>
+</a>
+
+<a href="404.html" class="footer-contact-link">
+    <span class="material-icons" aria-hidden="true">call</span>
+    <span>+91 98765 43210</span>
+</a>
+        </div>
+
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom footer-reveal">
+
+        <p class="footer-copyright">
+            © 2026 Stackly. All rights reserved.
+        </p>
+
+        <nav class="footer-legal" aria-label="Legal links">
+            <a href="404.html">Terms of Service <span>›</span></a>
+            <a href="404.html">Privacy Policy <span>›</span></a>
+            <a href="404.html">Cookie Policy <span>›</span></a>
+        </nav>
+
+    </div>
+
+</footer>
+
+
+    <!-- JavaScript -->
+     
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.2/gsap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/collections.js"></script>
+
+</body>
+</html>

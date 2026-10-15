@@ -1,0 +1,2346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#173f32">
+
+    <title>Stackly Furniture | Admin Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/admin-dashboard.css">
+</head>
+
+<body>
+
+<div class="admin-shell">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar" id="adminSidebar">
+
+        <div class="sidebar-top">
+
+          <a href="#overview" class="brand">
+    <img
+        src="assets/logo 4.webp"
+        alt="Stackly Furniture Logo"
+        class="brand-logo"
+    >
+</a>
+
+            <!-- Dynamic Admin Profile -->
+
+            <div class="profile-card">
+
+                <span class="avatar" id="sidebarAvatar">A</span>
+
+                <div class="profile-copy">
+                    <strong id="sidebarName">Store Admin</strong>
+                    <span id="sidebarEmail">admin@stackly.com</span>
+                    <small>ADMINISTRATOR</small>
+                </div>
+
+            </div>
+
+            <p class="nav-label">STORE WORKSPACE</p>
+
+            <!-- Sidebar Navigation -->
+
+            <nav class="nav-menu">
+
+                <a href="#overview"
+                   class="nav-link active"
+                   data-title="Overview"
+                   data-subtitle="Your furniture store at a glance">
+
+                    <span class="material-icons">space_dashboard</span>
+                    <span>Overview</span>
+                </a>
+
+                <a href="#products"
+                   class="nav-link"
+                   data-title="Products"
+                   data-subtitle="Manage furniture collections and product details">
+
+                    <span class="material-icons">chair</span>
+                    <span>Products</span>
+                    <small>48</small>
+                </a>
+
+                <a href="#orders"
+                   class="nav-link"
+                   data-title="Orders"
+                   data-subtitle="Track customer purchases and fulfilment">
+
+                    <span class="material-icons">shopping_bag</span>
+                    <span>Orders</span>
+                    <small>12</small>
+                </a>
+
+                <a href="#inventory"
+                   class="nav-link"
+                   data-title="Inventory"
+                   data-subtitle="Monitor stock and restocking priorities">
+
+                    <span class="material-icons">inventory_2</span>
+                    <span>Inventory</span>
+                </a>
+
+                <a href="#customers"
+                   class="nav-link"
+                   data-title="Customers"
+                   data-subtitle="Understand your furniture shoppers">
+
+                    <span class="material-icons">groups</span>
+                    <span>Customers</span>
+                </a>
+
+                <a href="#promotions"
+                   class="nav-link"
+                   data-title="Promotions"
+                   data-subtitle="Manage furniture collections and offers">
+
+                    <span class="material-icons">local_offer</span>
+                    <span>Promotions</span>
+                </a>
+
+                <a href="#analytics"
+                   class="nav-link"
+                   data-title="Analytics"
+                   data-subtitle="Explore store performance">
+
+                    <span class="material-icons">monitoring</span>
+                    <span>Analytics</span>
+                </a>
+
+                <a href="#support"
+                   class="nav-link"
+                   data-title="Support"
+                   data-subtitle="Customer questions and service requests">
+
+                    <span class="material-icons">support_agent</span>
+                    <span>Support</span>
+                    <small>4</small>
+                </a>
+
+                <a href="#settings"
+                   class="nav-link"
+                   data-title="Store Settings"
+                   data-subtitle="Manage store preferences">
+
+                    <span class="material-icons">settings</span>
+                    <span>Store Settings</span>
+                </a>
+
+            </nav>
+
+        </div>
+
+        <!-- Sidebar Bottom -->
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-help">
+                <span class="material-icons">help_outline</span>
+
+                <div>
+                    <strong>Need a hand?</strong>
+                    <small>Visit the help centre</small>
+                </div>
+
+                <a href="404.html">Open</a>
+            </div>
+
+            <a href="login.html" class="logout-link">
+                <span class="material-icons">logout</span>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- ================= MAIN AREA ================= -->
+
+    <main class="main-area">
+
+        <!-- HEADER -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button class="menu-toggle"
+                        id="menuToggle"
+                        type="button"
+                        aria-label="Toggle navigation"
+                        aria-expanded="false">
+
+                    <span class="material-icons">menu</span>
+                </button>
+
+                <div>
+                    <h1 id="pageTitle">Overview</h1>
+
+                    <p id="pageSubtitle">
+                        Your furniture store at a glance
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="topbar-actions">
+
+                <a href="404.html" class="search-link">
+                    <span class="material-icons search-icon">search</span>
+                    <span class="search-text">Search your store...</span>
+                </a>
+
+                <a href="404.html"
+                   class="header-action help-action"
+                   aria-label="Help">
+
+                    <span class="material-icons">help_outline</span>
+                </a>
+
+                <!-- Dynamic Account Email and Initial -->
+
+                <button class="user-chip"
+                        id="headerUser"
+                        type="button"
+                        aria-label="Open account details">
+
+                    <span class="avatar header-avatar" id="headerAvatar">
+                        A
+                    </span>
+
+                    <span class="header-user-copy">
+                        <strong id="headerName">Store Admin</strong>
+                        <small id="headerEmail">admin@stackly.com</small>
+                    </span>
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- ================= PAGE CONTENT ================= -->
+
+        <div class="page-content">
+
+            <!-- ==========================================
+                 1. OVERVIEW DASHBOARD
+            =========================================== -->
+
+            <section class="admin-page active" id="overview">
+
+                <!-- Welcome Banner -->
+
+                <div class="welcome-banner">
+
+                    <div class="welcome-copy">
+
+                        <span class="eyebrow light-eyebrow">
+                            STACKLY FURNITURE • ADMIN WORKSPACE
+                        </span>
+
+                        <h2>
+                            Make every space
+                            <em>feel like home.</em>
+                        </h2>
+
+                        <p>
+                            Manage furniture collections, keep orders moving,
+                            and make every customer experience feel considered.
+                        </p>
+
+                        <div class="button-row">
+
+                            <a href="#products" class="btn btn-light">
+                                Manage collection
+                            </a>
+
+                            <a href="#orders" class="btn btn-ghost">
+                                Review orders
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="welcome-art" aria-hidden="true">
+
+                        <div class="art-circle"></div>
+
+                        <div class="art-sofa">
+                            <span></span>
+                            <i></i>
+                            <b></b>
+                        </div>
+
+                        <div class="art-plant">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <b></b>
+                        </div>
+
+                        <div class="art-caption">
+
+                            <span class="material-icons">weekend</span>
+
+                            <div>
+                                <strong>Thoughtful living</strong>
+                                <small>Curated for your home</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Performance -->
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">STORE SNAPSHOT</span>
+                        <h2>Performance overview</h2>
+                        <p>Quick view of your furniture business today.</p>
+                    </div>
+
+                    <a href="#analytics" class="text-link">
+                        Explore analytics
+                    </a>
+
+                </div>
+
+                <div class="metric-grid">
+
+                    <article class="metric-card">
+
+                        <div class="metric-top">
+                            <span class="metric-icon sage">
+                                <span class="material-icons">payments</span>
+                            </span>
+                            <span class="trend positive">+12.8%</span>
+                        </div>
+
+                        <small>Gross sales</small>
+                        <strong>₹8,42,580</strong>
+                        <p>Compared with last month</p>
+
+                        <div class="mini-line">
+                            <i style="height:34%"></i>
+                            <i style="height:48%"></i>
+                            <i style="height:43%"></i>
+                            <i style="height:65%"></i>
+                            <i style="height:56%"></i>
+                            <i style="height:76%"></i>
+                            <i style="height:88%"></i>
+                        </div>
+
+                    </article>
+
+                    <article class="metric-card">
+
+                        <div class="metric-top">
+                            <span class="metric-icon mint">
+                                <span class="material-icons">shopping_bag</span>
+                            </span>
+                            <span class="trend positive">+8.4%</span>
+                        </div>
+
+                        <small>Orders received</small>
+                        <strong>1,248</strong>
+                        <p>Orders across all channels</p>
+
+                        <div class="metric-foot">
+                            <span class="dot green-dot"></span>
+                            24 need processing
+                        </div>
+
+                    </article>
+
+                    <article class="metric-card">
+
+                        <div class="metric-top">
+                            <span class="metric-icon sand">
+                                <span class="material-icons">chair</span>
+                            </span>
+                            <span class="trend neutral">148 active</span>
+                        </div>
+
+                        <small>Listed products</small>
+                        <strong>186</strong>
+                        <p>Across 8 furniture categories</p>
+
+                        <div class="progress-track">
+                            <span style="width:80%"></span>
+                        </div>
+
+                        <div class="progress-caption">
+                            <span>80% published</span>
+                            <span>38 drafts</span>
+                        </div>
+
+                    </article>
+
+                    <article class="metric-card">
+
+                        <div class="metric-top">
+                            <span class="metric-icon olive">
+                                <span class="material-icons">groups</span>
+                            </span>
+                            <span class="trend positive">+6.2%</span>
+                        </div>
+
+                        <small>Returning customers</small>
+                        <strong>684</strong>
+                        <p>Customers who came back</p>
+
+                        <div class="metric-foot">
+                            <span class="material-icons">favorite</span>
+                            Customer loyalty is growing
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <!-- Sales Charts -->
+
+                <div class="overview-columns">
+
+                    <article class="panel sales-panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+                                <span class="eyebrow">REVENUE REPORT</span>
+                                <h3>Sales performance</h3>
+                                <p>Weekly revenue across your store</p>
+                            </div>
+
+                            <select id="salesPeriod" aria-label="Sales period">
+                                <option>Last 7 days</option>
+                                <option>Last 30 days</option>
+                                <option>Last 90 days</option>
+                            </select>
+
+                        </div>
+
+                        <div class="chart-summary">
+                            <strong>₹2,48,650</strong>
+                            <span class="trend positive">+14.6% this week</span>
+                        </div>
+
+                        <div class="bar-chart"
+                             role="img"
+                             aria-label="Illustrative weekly sales chart">
+
+                            <div class="chart-gridlines">
+                                <i></i><i></i><i></i><i></i>
+                            </div>
+
+                            <div class="bar-column">
+                                <span style="height:42%"></span>
+                                <small>Mon</small>
+                            </div>
+
+                            <div class="bar-column">
+                                <span style="height:62%"></span>
+                                <small>Tue</small>
+                            </div>
+
+                            <div class="bar-column">
+                                <span style="height:51%"></span>
+                                <small>Wed</small>
+                            </div>
+
+                            <div class="bar-column">
+                                <span style="height:77%"></span>
+                                <small>Thu</small>
+                            </div>
+
+                            <div class="bar-column">
+                                <span style="height:59%"></span>
+                                <small>Fri</small>
+                            </div>
+
+                            <div class="bar-column">
+                                <span class="highlight-bar" style="height:91%"></span>
+                                <small>Sat</small>
+                            </div>
+
+                            <div class="bar-column">
+                                <span style="height:70%"></span>
+                                <small>Sun</small>
+                            </div>
+
+                        </div>
+
+                        <div class="chart-note">
+                            <span><i class="legend-dot"></i>Net sales</span>
+                            <small>Demo dashboard figures</small>
+                        </div>
+
+                    </article>
+
+                    <article class="panel category-panel">
+
+                        <div class="panel-heading">
+                            <div>
+                                <span class="eyebrow">PRODUCT MIX</span>
+                                <h3>Sales by category</h3>
+                                <p>Where customers are shopping</p>
+                            </div>
+
+                            <a href="#products" class="text-link">
+                                View products
+                            </a>
+                        </div>
+
+                        <div class="donut-wrap">
+
+                            <div class="donut">
+                                <div>
+                                    <strong>₹8.4L</strong>
+                                    <small>Total sales</small>
+                                </div>
+                            </div>
+
+                            <div class="legend-list">
+
+                                <span>
+                                    <i class="legend-dot dot-one"></i>
+                                    Living room <b>38%</b>
+                                </span>
+
+                                <span>
+                                    <i class="legend-dot dot-two"></i>
+                                    Bedroom <b>27%</b>
+                                </span>
+
+                                <span>
+                                    <i class="legend-dot dot-three"></i>
+                                    Dining <b>21%</b>
+                                </span>
+
+                                <span>
+                                    <i class="legend-dot dot-four"></i>
+                                    Office &amp; other <b>14%</b>
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <!-- Attention Cards -->
+
+                <div class="section-heading compact-heading">
+                    <div>
+                        <span class="eyebrow">DAILY OPERATIONS</span>
+                        <h2>What needs attention</h2>
+                        <p>Actions that help keep the store running smoothly.</p>
+                    </div>
+                </div>
+
+                <div class="attention-grid">
+
+                    <article class="attention-card">
+
+                        <span class="attention-icon amber">
+                            <span class="material-icons">inventory</span>
+                        </span>
+
+                        <div>
+                            <strong>Low stock to review</strong>
+                            <p>7 products are below their preferred stock level.</p>
+                            <a href="#inventory">Review inventory</a>
+                        </div>
+
+                        <span class="count-pill">7</span>
+
+                    </article>
+
+                    <article class="attention-card">
+
+                        <span class="attention-icon blue">
+                            <span class="material-icons">local_shipping</span>
+                        </span>
+
+                        <div>
+                            <strong>Orders awaiting dispatch</strong>
+                            <p>24 orders need packing or shipment updates.</p>
+                            <a href="#orders">Open order queue</a>
+                        </div>
+
+                        <span class="count-pill">24</span>
+
+                    </article>
+
+                    <article class="attention-card">
+
+                        <span class="attention-icon rose">
+                            <span class="material-icons">forum</span>
+                        </span>
+
+                        <div>
+                            <strong>Customer messages</strong>
+                            <p>4 questions are waiting for a helpful reply.</p>
+                            <a href="#support">View messages</a>
+                        </div>
+
+                        <span class="count-pill">4</span>
+
+                    </article>
+
+                </div>
+
+                <!-- Bestsellers and Activity -->
+
+                <div class="overview-columns lower-columns">
+
+                    <article class="panel">
+
+                        <div class="panel-heading">
+                            <div>
+                                <span class="eyebrow">POPULAR PICKS</span>
+                                <h3>Best-selling furniture</h3>
+                                <p>Top products by units sold</p>
+                            </div>
+
+                            <a href="#products" class="text-link">
+                                View collection
+                            </a>
+                        </div>
+
+                        <div class="product-list">
+
+                            <div class="product-list-row">
+
+                                <span class="product-swatch swatch-sofa">
+                                    <span class="material-icons">weekend</span>
+                                </span>
+
+                                <div class="product-list-info">
+                                    <strong>Arden Lounge Sofa</strong>
+                                    <small>Living room · SKU SF-104</small>
+                                </div>
+
+                                <div class="product-list-value">
+                                    <strong>₹32,900</strong>
+                                    <small>86 sold</small>
+                                </div>
+
+                            </div>
+
+                            <div class="product-list-row">
+
+                                <span class="product-swatch swatch-chair">
+                                    <span class="material-icons">chair</span>
+                                </span>
+
+                                <div class="product-list-info">
+                                    <strong>Forma Accent Chair</strong>
+                                    <small>Living room · SKU CH-218</small>
+                                </div>
+
+                                <div class="product-list-value">
+                                    <strong>₹12,500</strong>
+                                    <small>64 sold</small>
+                                </div>
+
+                            </div>
+
+                            <div class="product-list-row">
+
+                                <span class="product-swatch swatch-table">
+                                    <span class="material-icons">table_restaurant</span>
+                                </span>
+
+                                <div class="product-list-info">
+                                    <strong>Oakline Dining Table</strong>
+                                    <small>Dining · SKU DT-032</small>
+                                </div>
+
+                                <div class="product-list-value">
+                                    <strong>₹24,800</strong>
+                                    <small>51 sold</small>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="panel">
+
+                        <div class="panel-heading">
+                            <div>
+                                <span class="eyebrow">RECENT ACTIVITY</span>
+                                <h3>Store timeline</h3>
+                                <p>Latest updates from your team</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+
+                            <div class="timeline-item">
+                                <i class="timeline-dot"></i>
+                                <div>
+                                    <strong>New order received</strong>
+                                    <p>Order #STF-2084 · Arden Lounge Sofa</p>
+                                    <small>8 minutes ago</small>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <i class="timeline-dot"></i>
+                                <div>
+                                    <strong>Inventory updated</strong>
+                                    <p>Forma Accent Chair stock was adjusted.</p>
+                                    <small>36 minutes ago</small>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <i class="timeline-dot"></i>
+                                <div>
+                                    <strong>Promotion published</strong>
+                                    <p>Spring Living collection is now active.</p>
+                                    <small>1 hour ago</small>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <i class="timeline-dot"></i>
+                                <div>
+                                    <strong>Customer review received</strong>
+                                    <p>A customer rated the Oakline table 5 stars.</p>
+                                    <small>2 hours ago</small>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+                 2. PRODUCTS
+            =========================================== -->
+
+            <section class="admin-page" id="products">
+
+                <div class="page-intro">
+                    <div>
+                        <span class="eyebrow">CATALOG MANAGEMENT</span>
+                        <h2>Furniture collection</h2>
+                        <p>Manage product details, prices, categories and stock.</p>
+                    </div>
+
+                    <a href="404.html" class="btn btn-primary">Add product</a>
+                </div>
+
+                <div class="inline-stats">
+                    <div><small>All products</small><strong>186</strong></div>
+                    <div><small>Published</small><strong>148</strong></div>
+                    <div><small>Draft listings</small><strong>38</strong></div>
+                    <div><small>Categories</small><strong>8</strong></div>
+                </div>
+
+                <div class="toolbar">
+
+                    <div class="local-search">
+                        <span class="material-icons">search</span>
+                        <input id="productFilter"
+                               type="search"
+                               placeholder="Filter furniture products..."
+                               aria-label="Filter products">
+                    </div>
+
+                    <select id="categoryFilter" aria-label="Filter by category">
+                        <option value="all">All categories</option>
+                        <option>Living room</option>
+                        <option>Bedroom</option>
+                        <option>Dining</option>
+                        <option>Office</option>
+                        <option>Outdoor</option>
+                    </select>
+
+                    <a href="404.html" class="btn btn-outline">Export catalog</a>
+
+                </div>
+
+                <div class="table-panel">
+
+                    <div class="table-heading">
+                        <div>
+                            <h3>Product catalog</h3>
+                            <p>Furniture products and availability</p>
+                        </div>
+                        <span class="status-tag">Store catalogue</span>
+                    </div>
+
+                    <div class="table-scroll">
+
+                        <table id="productsTable">
+
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>SKU</th>
+                                    <th>Category</th>
+                                    <th>Price</th>
+                                    <th>Stock</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr data-category="Living room">
+                                    <td>
+                                        <div class="table-product">
+                                            <span class="table-product-icon sofa">
+                                                <span class="material-icons">weekend</span>
+                                            </span>
+                                            <span>
+                                                <strong>Arden Lounge Sofa</strong>
+                                                <small>3-seat · Sand linen</small>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td>SF-104</td>
+                                    <td>Living room</td>
+                                    <td>₹32,900</td>
+                                    <td>24 units</td>
+                                    <td><span class="status-tag status-active">Published</span></td>
+                                    <td><a href="404.html" class="row-action">Manage</a></td>
+                                </tr>
+
+                                <tr data-category="Living room">
+                                    <td>
+                                        <div class="table-product">
+                                            <span class="table-product-icon chair">
+                                                <span class="material-icons">chair</span>
+                                            </span>
+                                            <span>
+                                                <strong>Forma Accent Chair</strong>
+                                                <small>Oak frame · Moss fabric</small>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td>CH-218</td>
+                                    <td>Living room</td>
+                                    <td>₹12,500</td>
+                                    <td>8 units</td>
+                                    <td><span class="status-tag status-active">Published</span></td>
+                                    <td><a href="404.html" class="row-action">Manage</a></td>
+                                </tr>
+
+                                <tr data-category="Dining">
+                                    <td>
+                                        <div class="table-product">
+                                            <span class="table-product-icon table">
+                                                <span class="material-icons">table_restaurant</span>
+                                            </span>
+                                            <span>
+                                                <strong>Oakline Dining Table</strong>
+                                                <small>Solid oak · 6 seater</small>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td>DT-032</td>
+                                    <td>Dining</td>
+                                    <td>₹24,800</td>
+                                    <td>16 units</td>
+                                    <td><span class="status-tag status-active">Published</span></td>
+                                    <td><a href="404.html" class="row-action">Manage</a></td>
+                                </tr>
+
+                                <tr data-category="Bedroom">
+                                    <td>
+                                        <div class="table-product">
+                                            <span class="table-product-icon bed">
+                                                <span class="material-icons">bed</span>
+                                            </span>
+                                            <span>
+                                                <strong>Haven Platform Bed</strong>
+                                                <small>Queen size · Natural oak</small>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td>BD-071</td>
+                                    <td>Bedroom</td>
+                                    <td>₹28,400</td>
+                                    <td>3 units</td>
+                                    <td><span class="status-tag status-low">Low stock</span></td>
+                                    <td><a href="404.html" class="row-action">Manage</a></td>
+                                </tr>
+
+                                <tr data-category="Office">
+                                    <td>
+                                        <div class="table-product">
+                                            <span class="table-product-icon desk">
+                                                <span class="material-icons">desk</span>
+                                            </span>
+                                            <span>
+                                                <strong>Workwell Writing Desk</strong>
+                                                <small>Walnut finish · 120 cm</small>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td>OF-155</td>
+                                    <td>Office</td>
+                                    <td>₹9,900</td>
+                                    <td>19 units</td>
+                                    <td><span class="status-tag status-active">Published</span></td>
+                                    <td><a href="404.html" class="row-action">Manage</a></td>
+                                </tr>
+
+                                <tr data-category="Outdoor">
+                                    <td>
+                                        <div class="table-product">
+                                            <span class="table-product-icon outdoor">
+                                                <span class="material-icons">deck</span>
+                                            </span>
+                                            <span>
+                                                <strong>Solstice Patio Set</strong>
+                                                <small>Weather-ready · 4 pieces</small>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td>OD-019</td>
+                                    <td>Outdoor</td>
+                                    <td>₹18,600</td>
+                                    <td>0 units</td>
+                                    <td><span class="status-tag status-out">Out of stock</span></td>
+                                    <td><a href="404.html" class="row-action">Manage</a></td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                    <div class="table-foot">
+                        <span id="productCount">Showing 6 products</span>
+                        <a href="404.html">Product settings</a>
+                    </div>
+
+                </div>
+
+                <div class="info-banner">
+                    <span class="material-icons">tips_and_updates</span>
+                    <div>
+                        <strong>Keep product information consistent</strong>
+                        <p>
+                            Use clear names, accurate dimensions, finish details
+                            and current stock values.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+                 3. ORDERS
+            =========================================== -->
+
+            <section class="admin-page" id="orders">
+
+                <div class="page-intro">
+                    <div>
+                        <span class="eyebrow">ORDER MANAGEMENT</span>
+                        <h2>Customer orders</h2>
+                        <p>Track purchases from confirmation through delivery.</p>
+                    </div>
+
+                    <a href="404.html" class="btn btn-outline">Export orders</a>
+                </div>
+
+                <div class="metric-grid four-metrics">
+
+                    <article class="metric-card">
+                        <span class="metric-icon sage">
+                            <span class="material-icons">shopping_bag</span>
+                        </span>
+                        <small>Total orders</small>
+                        <strong>1,248</strong>
+                        <p>All-time store orders</p>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon sand">
+                            <span class="material-icons">hourglass_top</span>
+                        </span>
+                        <small>Processing</small>
+                        <strong>24</strong>
+                        <p>Ready for fulfilment</p>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon mint">
+                            <span class="material-icons">local_shipping</span>
+                        </span>
+                        <small>In transit</small>
+                        <strong>18</strong>
+                        <p>With delivery partners</p>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon olive">
+                            <span class="material-icons">task_alt</span>
+                        </span>
+                        <small>Delivered</small>
+                        <strong>1,206</strong>
+                        <p>Successfully completed</p>
+                    </article>
+
+                </div>
+
+                <div class="toolbar">
+
+                    <div class="local-search">
+                        <span class="material-icons">search</span>
+                        <input id="orderFilter"
+                               type="search"
+                               placeholder="Search order or customer..."
+                               aria-label="Search orders">
+                    </div>
+
+                    <select id="orderStatusFilter" aria-label="Filter orders">
+                        <option value="all">All statuses</option>
+                        <option>Processing</option>
+                        <option>Shipped</option>
+                        <option>Delivered</option>
+                        <option>Pending</option>
+                    </select>
+
+                </div>
+
+                <div class="table-panel">
+
+                    <div class="table-heading">
+                        <div>
+                            <h3>Latest orders</h3>
+                            <p>Review order details and fulfilment status</p>
+                        </div>
+                        <span class="status-tag">Updated today</span>
+                    </div>
+
+                    <div class="table-scroll">
+
+                        <table id="ordersTable">
+
+                            <thead>
+                                <tr>
+                                    <th>Order / Customer</th>
+                                    <th>Items</th>
+                                    <th>Order date</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr data-status="Processing">
+                                    <td>
+                                        <strong>#STF-2084</strong>
+                                        <small class="cell-sub">Rahul Sharma</small>
+                                    </td>
+                                    <td>Arden Lounge Sofa</td>
+                                    <td>12 Oct 2026</td>
+                                    <td>₹32,900</td>
+                                    <td><span class="status-tag status-pending">Processing</span></td>
+                                    <td><a href="404.html" class="row-action">View</a></td>
+                                </tr>
+
+                                <tr data-status="Shipped">
+                                    <td>
+                                        <strong>#STF-2083</strong>
+                                        <small class="cell-sub">Ananya Patel</small>
+                                    </td>
+                                    <td>Forma Accent Chair × 2</td>
+                                    <td>12 Oct 2026</td>
+                                    <td>₹25,000</td>
+                                    <td><span class="status-tag status-active">Shipped</span></td>
+                                    <td><a href="404.html" class="row-action">View</a></td>
+                                </tr>
+
+                                <tr data-status="Delivered">
+                                    <td>
+                                        <strong>#STF-2082</strong>
+                                        <small class="cell-sub">Vikram Kumar</small>
+                                    </td>
+                                    <td>Oakline Dining Table</td>
+                                    <td>11 Oct 2026</td>
+                                    <td>₹24,800</td>
+                                    <td><span class="status-tag status-active">Delivered</span></td>
+                                    <td><a href="404.html" class="row-action">View</a></td>
+                                </tr>
+
+                                <tr data-status="Pending">
+                                    <td>
+                                        <strong>#STF-2081</strong>
+                                        <small class="cell-sub">Meera Reddy</small>
+                                    </td>
+                                    <td>Haven Platform Bed</td>
+                                    <td>11 Oct 2026</td>
+                                    <td>₹28,400</td>
+                                    <td><span class="status-tag status-low">Pending</span></td>
+                                    <td><a href="404.html" class="row-action">View</a></td>
+                                </tr>
+
+                                <tr data-status="Processing">
+                                    <td>
+                                        <strong>#STF-2080</strong>
+                                        <small class="cell-sub">Arjun Rao</small>
+                                    </td>
+                                    <td>Workwell Writing Desk</td>
+                                    <td>10 Oct 2026</td>
+                                    <td>₹9,900</td>
+                                    <td><span class="status-tag status-pending">Processing</span></td>
+                                    <td><a href="404.html" class="row-action">View</a></td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                    <div class="table-foot">
+                        <span id="orderCount">Showing 5 orders</span>
+                        <a href="404.html">Fulfilment settings</a>
+                    </div>
+
+                </div>
+
+                <div class="overview-columns">
+
+                    <article class="panel">
+
+                        <div class="panel-heading">
+                            <div>
+                                <span class="eyebrow">FULFILMENT</span>
+                                <h3>Order journey</h3>
+                                <p>Keep customers informed at each step.</p>
+                            </div>
+                        </div>
+
+                        <div class="journey-steps">
+                            <div>
+                                <i>1</i>
+                                <span>
+                                    <strong>Confirmed</strong>
+                                    <small>Payment and address checked</small>
+                                </span>
+                            </div>
+
+                            <div>
+                                <i>2</i>
+                                <span>
+                                    <strong>Prepared</strong>
+                                    <small>Items checked and packed safely</small>
+                                </span>
+                            </div>
+
+                            <div>
+                                <i>3</i>
+                                <span>
+                                    <strong>Dispatched</strong>
+                                    <small>Tracking details shared</small>
+                                </span>
+                            </div>
+
+                            <div>
+                                <i>4</i>
+                                <span>
+                                    <strong>Delivered</strong>
+                                    <small>Order completed</small>
+                                </span>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <article class="panel">
+                        <div class="panel-heading">
+                            <div>
+                                <span class="eyebrow">SERVICE STANDARD</span>
+                                <h3>Careful delivery matters</h3>
+                            </div>
+                        </div>
+
+                        <p class="panel-copy">
+                            Furniture needs secure packaging and clear delivery
+                            communication. Confirm dimensions, access requirements
+                            and assembly notes before dispatch.
+                        </p>
+
+                        <a href="#support" class="btn btn-primary">
+                            Review customer questions
+                        </a>
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+                 4. INVENTORY
+            =========================================== -->
+
+            <section class="admin-page" id="inventory">
+
+                <div class="page-intro">
+                    <div>
+                        <span class="eyebrow">STOCK CONTROL</span>
+                        <h2>Inventory health</h2>
+                        <p>Keep popular furniture available for your customers.</p>
+                    </div>
+
+                    <a href="404.html" class="btn btn-primary">
+                        Create stock update
+                    </a>
+                </div>
+
+                <div class="inventory-hero">
+                    <div>
+                        <span class="eyebrow light-eyebrow">INVENTORY CHECK</span>
+                        <h3>Your collection is in good shape.</h3>
+                        <p>
+                            Review the items that may need attention before
+                            the next sales period.
+                        </p>
+                    </div>
+
+                    <div class="inventory-score">
+                        <strong>92%</strong>
+                        <span>stock health</span>
+                    </div>
+                </div>
+
+                <div class="metric-grid four-metrics">
+
+                    <article class="metric-card">
+                        <span class="metric-icon sage">
+                            <span class="material-icons">inventory_2</span>
+                        </span>
+                        <small>Total stock units</small>
+                        <strong>2,846</strong>
+                        <p>Across active listings</p>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon sand">
+                            <span class="material-icons">warning_amber</span>
+                        </span>
+                        <small>Low stock</small>
+                        <strong>7</strong>
+                        <p>At or below reorder point</p>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon rose">
+                            <span class="material-icons">remove_shopping_cart</span>
+                        </span>
+                        <small>Out of stock</small>
+                        <strong>3</strong>
+                        <p>Currently unavailable</p>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon mint">
+                            <span class="material-icons">published_with_changes</span>
+                        </span>
+                        <small>Restock requests</small>
+                        <strong>11</strong>
+                        <p>Waiting for supplier update</p>
+                    </article>
+
+                </div>
+
+                <div class="panel stock-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <span class="eyebrow">REORDER PRIORITIES</span>
+                            <h3>Items to review</h3>
+                            <p>Current sample stock figures</p>
+                        </div>
+
+                        <a href="404.html" class="text-link">
+                            Supplier directory
+                        </a>
+                    </div>
+
+                    <div class="stock-list">
+
+                        <div class="stock-row">
+                            <span class="stock-symbol">
+                                <span class="material-icons">bed</span>
+                            </span>
+
+                            <div class="stock-info">
+                                <strong>Haven Platform Bed</strong>
+                                <small>Bedroom · SKU BD-071</small>
+                            </div>
+
+                            <div class="stock-meter">
+                                <span><i style="width:18%"></i></span>
+                                <small>3 of 18 units</small>
+                            </div>
+
+                            <span class="status-tag status-low">Restock soon</span>
+                            <a href="404.html" class="row-action">Review</a>
+                        </div>
+
+                        <div class="stock-row">
+                            <span class="stock-symbol">
+                                <span class="material-icons">chair</span>
+                            </span>
+
+                            <div class="stock-info">
+                                <strong>Forma Accent Chair</strong>
+                                <small>Living room · SKU CH-218</small>
+                            </div>
+
+                            <div class="stock-meter">
+                                <span><i style="width:32%"></i></span>
+                                <small>8 of 25 units</small>
+                            </div>
+
+                            <span class="status-tag status-low">Low stock</span>
+                            <a href="404.html" class="row-action">Review</a>
+                        </div>
+
+                        <div class="stock-row">
+                            <span class="stock-symbol">
+                                <span class="material-icons">deck</span>
+                            </span>
+
+                            <div class="stock-info">
+                                <strong>Solstice Patio Set</strong>
+                                <small>Outdoor · SKU OD-019</small>
+                            </div>
+
+                            <div class="stock-meter">
+                                <span><i style="width:0%"></i></span>
+                                <small>0 of 12 units</small>
+                            </div>
+
+                            <span class="status-tag status-out">Unavailable</span>
+                            <a href="404.html" class="row-action">Review</a>
+                        </div>
+
+                        <div class="stock-row">
+                            <span class="stock-symbol">
+                                <span class="material-icons">desk</span>
+                            </span>
+
+                            <div class="stock-info">
+                                <strong>Workwell Writing Desk</strong>
+                                <small>Office · SKU OF-155</small>
+                            </div>
+
+                            <div class="stock-meter">
+                                <span><i style="width:58%"></i></span>
+                                <small>19 of 32 units</small>
+                            </div>
+
+                            <span class="status-tag status-active">Healthy</span>
+                            <a href="404.html" class="row-action">Review</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="info-banner">
+                    <span class="material-icons">lightbulb</span>
+                    <div>
+                        <strong>Stock planning tip</strong>
+                        <p>
+                            Use recent sales and supplier lead times to set
+                            reorder levels for furniture products.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+                 5. CUSTOMERS
+            =========================================== -->
+
+            <section class="admin-page" id="customers">
+
+                <div class="page-intro">
+                    <div>
+                        <span class="eyebrow">CUSTOMER RELATIONSHIPS</span>
+                        <h2>Your customers</h2>
+                        <p>Understand shopping patterns and after-sales care.</p>
+                    </div>
+
+                    <a href="404.html" class="btn btn-outline">
+                        Export customers
+                    </a>
+                </div>
+
+                <div class="metric-grid four-metrics">
+
+                    <article class="metric-card">
+                        <span class="metric-icon sage">
+                            <span class="material-icons">groups</span>
+                        </span>
+                        <small>Customer profiles</small>
+                        <strong>1,204</strong>
+                        <p>Registered shoppers</p>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon mint">
+                            <span class="material-icons">repeat</span>
+                        </span>
+                        <small>Repeat customers</small>
+                        <strong>684</strong>
+                        <p>Shopped more than once</p>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon sand">
+                            <span class="material-icons">star</span>
+                        </span>
+                        <small>Average rating</small>
+                        <strong>4.8/5</strong>
+                        <p>Customer feedback</p>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon olive">
+                            <span class="material-icons">mail</span>
+                        </span>
+                        <small>Follow-ups due</small>
+                        <strong>16</strong>
+                        <p>Service or delivery updates</p>
+                    </article>
+
+                </div>
+
+                <div class="toolbar">
+
+                    <div class="local-search">
+                        <span class="material-icons">search</span>
+                        <input id="customerFilter"
+                               type="search"
+                               placeholder="Search customer name..."
+                               aria-label="Search customers">
+                    </div>
+
+                    <a href="404.html" class="btn btn-outline">
+                        Customer settings
+                    </a>
+
+                </div>
+
+                <div class="customer-grid">
+
+                    <article class="customer-card">
+
+                        <div class="customer-card-top">
+                            <span class="customer-avatar">RS</span>
+                            <span class="status-tag status-active">Returning</span>
+                        </div>
+
+                        <h3>Rahul Sharma</h3>
+                        <p>rahul.sharma@example.com</p>
+
+                        <div class="customer-stats">
+                            <span><small>Orders</small><strong>8</strong></span>
+                            <span><small>Total spent</small><strong>₹86,400</strong></span>
+                            <span><small>Last order</small><strong>12 Oct</strong></span>
+                        </div>
+
+                        <a href="404.html" class="btn btn-outline full-btn">
+                            View profile
+                        </a>
+
+                    </article>
+
+                    <article class="customer-card">
+
+                        <div class="customer-card-top">
+                            <span class="customer-avatar alt-one">AP</span>
+                            <span class="status-tag status-active">Returning</span>
+                        </div>
+
+                        <h3>Ananya Patel</h3>
+                        <p>ananya.patel@example.com</p>
+
+                        <div class="customer-stats">
+                            <span><small>Orders</small><strong>5</strong></span>
+                            <span><small>Total spent</small><strong>₹52,750</strong></span>
+                            <span><small>Last order</small><strong>12 Oct</strong></span>
+                        </div>
+
+                        <a href="404.html" class="btn btn-outline full-btn">
+                            View profile
+                        </a>
+
+                    </article>
+
+                    <article class="customer-card">
+
+                        <div class="customer-card-top">
+                            <span class="customer-avatar alt-two">MK</span>
+                            <span class="status-tag status-pending">New</span>
+                        </div>
+
+                        <h3>Meera Kumar</h3>
+                        <p>meera.kumar@example.com</p>
+
+                        <div class="customer-stats">
+                            <span><small>Orders</small><strong>1</strong></span>
+                            <span><small>Total spent</small><strong>₹18,600</strong></span>
+                            <span><small>Last order</small><strong>11 Oct</strong></span>
+                        </div>
+
+                        <a href="404.html" class="btn btn-outline full-btn">
+                            View profile
+                        </a>
+
+                    </article>
+
+                    <article class="customer-card">
+
+                        <div class="customer-card-top">
+                            <span class="customer-avatar alt-three">VR</span>
+                            <span class="status-tag status-active">Returning</span>
+                        </div>
+
+                        <h3>Vikram Rao</h3>
+                        <p>vikram.rao@example.com</p>
+
+                        <div class="customer-stats">
+                            <span><small>Orders</small><strong>4</strong></span>
+                            <span><small>Total spent</small><strong>₹64,200</strong></span>
+                            <span><small>Last order</small><strong>10 Oct</strong></span>
+                        </div>
+
+                        <a href="404.html" class="btn btn-outline full-btn">
+                            View profile
+                        </a>
+
+                    </article>
+
+                </div>
+
+                <div class="info-banner">
+                    <span class="material-icons">volunteer_activism</span>
+                    <div>
+                        <strong>Thoughtful after-sales service</strong>
+                        <p>
+                            Share assembly instructions, care guidance and
+                            delivery updates to build long-term relationships.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+                 6. PROMOTIONS
+            =========================================== -->
+
+            <section class="admin-page" id="promotions">
+
+                <div class="page-intro">
+                    <div>
+                        <span class="eyebrow">MERCHANDISING</span>
+                        <h2>Promotions &amp; campaigns</h2>
+                        <p>Highlight furniture collections and manage offers.</p>
+                    </div>
+
+                    <a href="404.html" class="btn btn-primary">
+                        Create campaign
+                    </a>
+                </div>
+
+                <div class="campaign-hero">
+
+                    <div>
+                        <span class="eyebrow light-eyebrow">SEASONAL EDIT</span>
+                        <h3>Make room for a fresh start.</h3>
+                        <p>
+                            Curate offers around room refreshes, timeless
+                            materials and considered design.
+                        </p>
+
+                        <a href="404.html" class="btn btn-light">
+                            Campaign settings
+                        </a>
+                    </div>
+
+                    <div class="campaign-seal">
+                        <span class="material-icons">sell</span>
+                        <strong>SPRING</strong>
+                        <small>HOME EDIT</small>
+                    </div>
+
+                </div>
+
+                <div class="metric-grid four-metrics">
+
+                    <article class="metric-card">
+                        <span class="metric-icon sage">
+                            <span class="material-icons">campaign</span>
+                        </span>
+                        <small>Active campaigns</small>
+                        <strong>6</strong>
+                        <p>Currently published</p>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon mint">
+                            <span class="material-icons">redeem</span>
+                        </span>
+                        <small>Offer redemptions</small>
+                        <strong>248</strong>
+                        <p>This month</p>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon sand">
+                            <span class="material-icons">groups</span>
+                        </span>
+                        <small>Campaign reach</small>
+                        <strong>8.4k</strong>
+                        <p>Campaign impressions</p>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon olive">
+                            <span class="material-icons">trending_up</span>
+                        </span>
+                        <small>Offer conversion</small>
+                        <strong>6.8%</strong>
+                        <p>Across active campaigns</p>
+                    </article>
+
+                </div>
+
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">CAMPAIGN LIBRARY</span>
+                        <h2>Current offers</h2>
+                        <p>Example promotions for the furniture store.</p>
+                    </div>
+                </div>
+
+                <div class="promotion-grid">
+
+                    <article class="promotion-card promotion-dark">
+                        <span class="material-icons">weekend</span>
+                        <small>ACTIVE · LIVING ROOM</small>
+                        <h3>ROOMREFRESH</h3>
+                        <p>Seasonal savings on selected living room furniture.</p>
+
+                        <div class="promo-bottom">
+                            <strong>10% offer</strong>
+                            <a href="404.html">Manage</a>
+                        </div>
+                    </article>
+
+                    <article class="promotion-card promotion-green">
+                        <span class="material-icons">bed</span>
+                        <small>ACTIVE · BEDROOM</small>
+                        <h3>RESTWELL</h3>
+                        <p>Promote bedroom essentials and coordinated sets.</p>
+
+                        <div class="promo-bottom">
+                            <strong>Bundle offer</strong>
+                            <a href="404.html">Manage</a>
+                        </div>
+                    </article>
+
+                    <article class="promotion-card promotion-sand">
+                        <span class="material-icons">table_restaurant</span>
+                        <small>UPCOMING · DINING</small>
+                        <h3>GATHERHOME</h3>
+                        <p>A campaign built around dining and entertaining.</p>
+
+                        <div class="promo-bottom">
+                            <strong>Scheduled</strong>
+                            <a href="404.html">Review</a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <span class="eyebrow">CAMPAIGN CHECKLIST</span>
+                            <h3>Before you publish</h3>
+                            <p>Keep every offer clear and consistent.</p>
+                        </div>
+                    </div>
+
+                    <div class="checklist">
+
+                        <label>
+                            <input type="checkbox">
+                            Offer dates and eligibility are confirmed
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            Product stock is sufficient for expected demand
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            Discount details are clear
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            Delivery and return conditions are up to date
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+                 7. ANALYTICS
+            =========================================== -->
+
+            <section class="admin-page" id="analytics">
+
+                <div class="page-intro">
+                    <div>
+                        <span class="eyebrow">BUSINESS INTELLIGENCE</span>
+                        <h2>Store analytics</h2>
+                        <p>Explore sales and catalogue performance.</p>
+                    </div>
+
+                    <a href="404.html" class="btn btn-outline">Full report</a>
+                </div>
+
+                <div class="analytics-hero">
+
+                    <div>
+                        <span class="eyebrow light-eyebrow">REVENUE OVERVIEW</span>
+                        <small>Recorded store revenue</small>
+                        <strong>₹8,42,580</strong>
+
+                        <p>
+                            <span class="trend positive">+18.6%</span>
+                            compared with the previous period
+                        </p>
+                    </div>
+
+                    <div class="analytics-spark">
+                        <i style="height:28%"></i>
+                        <i style="height:40%"></i>
+                        <i style="height:36%"></i>
+                        <i style="height:56%"></i>
+                        <i style="height:49%"></i>
+                        <i style="height:69%"></i>
+                        <i style="height:62%"></i>
+                        <i style="height:82%"></i>
+                        <i style="height:72%"></i>
+                        <i style="height:94%"></i>
+                    </div>
+
+                </div>
+
+                <div class="metric-grid four-metrics">
+
+                    <article class="metric-card">
+                        <span class="metric-icon sage">
+                            <span class="material-icons">shopping_cart</span>
+                        </span>
+                        <small>Order conversion</small>
+                        <strong>3.6%</strong>
+                        <p>Store visit to purchase</p>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon mint">
+                            <span class="material-icons">receipt_long</span>
+                        </span>
+                        <small>Average order value</small>
+                        <strong>₹6,750</strong>
+                        <p>Across completed orders</p>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon sand">
+                            <span class="material-icons">visibility</span>
+                        </span>
+                        <small>Product views</small>
+                        <strong>24.8k</strong>
+                        <p>Across listed products</p>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon olive">
+                            <span class="material-icons">favorite</span>
+                        </span>
+                        <small>Repeat purchase rate</small>
+                        <strong>32%</strong>
+                        <p>Returning customers</p>
+                    </article>
+
+                </div>
+
+                <div class="overview-columns">
+
+                    <article class="panel">
+
+                        <div class="panel-heading">
+                            <div>
+                                <span class="eyebrow">MONTHLY MOVEMENT</span>
+                                <h3>Revenue trend</h3>
+                                <p>Illustrative monthly comparison</p>
+                            </div>
+
+                            <span class="status-tag">6 months</span>
+                        </div>
+
+                        <div class="line-chart">
+
+                            <div class="line-chart-grid">
+                                <i></i><i></i><i></i><i></i>
+                            </div>
+
+                            <svg viewBox="0 0 600 190"
+                                 preserveAspectRatio="none"
+                                 aria-label="Revenue trend line">
+
+                                <defs>
+                                    <linearGradient id="areaFill"
+                                                    x1="0"
+                                                    x2="0"
+                                                    y1="0"
+                                                    y2="1">
+
+                                        <stop offset="0%"
+                                              stop-color="#5f947b"
+                                              stop-opacity=".30"/>
+
+                                        <stop offset="100%"
+                                              stop-color="#5f947b"
+                                              stop-opacity="0"/>
+
+                                    </linearGradient>
+                                </defs>
+
+                                <path
+                                    d="M0 150 C50 146 58 118 110 127 S178 140 220 100 S290 117 345 82 S410 100 465 52 S545 30 600 18 L600 190 L0 190Z"
+                                    fill="url(#areaFill)"/>
+
+                                <path
+                                    d="M0 150 C50 146 58 118 110 127 S178 140 220 100 S290 117 345 82 S410 100 465 52 S545 30 600 18"
+                                    fill="none"
+                                    stroke="#326b52"
+                                    stroke-width="4"
+                                    stroke-linecap="round"/>
+
+                            </svg>
+
+                            <div class="line-months">
+                                <span>May</span>
+                                <span>Jun</span>
+                                <span>Jul</span>
+                                <span>Aug</span>
+                                <span>Sep</span>
+                                <span>Oct</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="panel">
+
+                        <div class="panel-heading">
+                            <div>
+                                <span class="eyebrow">CATEGORY CONTRIBUTION</span>
+                                <h3>Sales breakdown</h3>
+                                <p>Illustrative share by category</p>
+                            </div>
+                        </div>
+
+                        <div class="category-bars">
+
+                            <div>
+                                <span>Living room</span>
+                                <b>38%</b>
+                                <i><em style="width:38%"></em></i>
+                            </div>
+
+                            <div>
+                                <span>Bedroom</span>
+                                <b>27%</b>
+                                <i><em style="width:27%"></em></i>
+                            </div>
+
+                            <div>
+                                <span>Dining</span>
+                                <b>21%</b>
+                                <i><em style="width:21%"></em></i>
+                            </div>
+
+                            <div>
+                                <span>Office</span>
+                                <b>9%</b>
+                                <i><em style="width:9%"></em></i>
+                            </div>
+
+                            <div>
+                                <span>Outdoor</span>
+                                <b>5%</b>
+                                <i><em style="width:5%"></em></i>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <div class="info-banner">
+                    <span class="material-icons">insights</span>
+                    <div>
+                        <strong>Make decisions with context</strong>
+                        <p>
+                            These dashboard values are sample interface data.
+                            Connect your store API or database for live reports.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+                 8. SUPPORT
+            =========================================== -->
+
+            <section class="admin-page" id="support">
+
+                <div class="page-intro">
+                    <div>
+                        <span class="eyebrow">CUSTOMER CARE</span>
+                        <h2>Support centre</h2>
+                        <p>Manage delivery questions and after-sales requests.</p>
+                    </div>
+
+                    <a href="404.html" class="btn btn-primary">
+                        Create support ticket
+                    </a>
+                </div>
+
+                <div class="metric-grid four-metrics">
+
+                    <article class="metric-card">
+                        <span class="metric-icon sage">
+                            <span class="material-icons">forum</span>
+                        </span>
+                        <small>Open requests</small>
+                        <strong>4</strong>
+                        <p>Need a response</p>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon mint">
+                            <span class="material-icons">check_circle</span>
+                        </span>
+                        <small>Resolved this week</small>
+                        <strong>38</strong>
+                        <p>Closed by the team</p>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon sand">
+                            <span class="material-icons">schedule</span>
+                        </span>
+                        <small>Average first reply</small>
+                        <strong>2.4h</strong>
+                        <p>Illustrative response time</p>
+                    </article>
+
+                    <article class="metric-card">
+                        <span class="metric-icon olive">
+                            <span class="material-icons">star</span>
+                        </span>
+                        <small>Service rating</small>
+                        <strong>4.8/5</strong>
+                        <p>Recent customer feedback</p>
+                    </article>
+
+                </div>
+
+                <div class="support-layout">
+
+                    <div class="panel">
+
+                        <div class="panel-heading">
+                            <div>
+                                <span class="eyebrow">INBOX</span>
+                                <h3>Recent customer requests</h3>
+                                <p>Sample tickets for the admin interface</p>
+                            </div>
+                        </div>
+
+                        <div class="ticket-list">
+
+                            <article class="ticket">
+                                <span class="ticket-icon amber">
+                                    <span class="material-icons">local_shipping</span>
+                                </span>
+
+                                <div>
+                                    <strong>Delivery slot confirmation</strong>
+                                    <p>Rahul Sharma · Order #STF-2084</p>
+                                    <small>8 minutes ago</small>
+                                </div>
+
+                                <span class="status-tag status-pending">Open</span>
+                                <a href="404.html" class="row-action">Open</a>
+                            </article>
+
+                            <article class="ticket">
+                                <span class="ticket-icon blue">
+                                    <span class="material-icons">chair</span>
+                                </span>
+
+                                <div>
+                                    <strong>Chair fabric care instructions</strong>
+                                    <p>Ananya Patel · Product CH-218</p>
+                                    <small>42 minutes ago</small>
+                                </div>
+
+                                <span class="status-tag status-pending">Open</span>
+                                <a href="404.html" class="row-action">Open</a>
+                            </article>
+
+                            <article class="ticket">
+                                <span class="ticket-icon rose">
+                                    <span class="material-icons">build</span>
+                                </span>
+
+                                <div>
+                                    <strong>Assembly guide request</strong>
+                                    <p>Meera Kumar · Order #STF-2078</p>
+                                    <small>2 hours ago</small>
+                                </div>
+
+                                <span class="status-tag status-low">Waiting</span>
+                                <a href="404.html" class="row-action">Open</a>
+                            </article>
+
+                            <article class="ticket">
+                                <span class="ticket-icon green">
+                                    <span class="material-icons">assignment_return</span>
+                                </span>
+
+                                <div>
+                                    <strong>Return policy clarification</strong>
+                                    <p>Vikram Rao · Order #STF-2074</p>
+                                    <small>3 hours ago</small>
+                                </div>
+
+                                <span class="status-tag status-pending">Open</span>
+                                <a href="404.html" class="row-action">Open</a>
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                    <aside class="panel support-side">
+
+                        <div class="panel-heading">
+                            <div>
+                                <span class="eyebrow">HELP TOPICS</span>
+                                <h3>Quick resources</h3>
+                            </div>
+                        </div>
+
+                        <a href="404.html" class="resource-link">
+                            <span class="material-icons">local_shipping</span>
+                            <span>
+                                <strong>Delivery &amp; assembly</strong>
+                                <small>Shipping and setup information</small>
+                            </span>
+                            <b>Open</b>
+                        </a>
+
+                        <a href="404.html" class="resource-link">
+                            <span class="material-icons">assignment_return</span>
+                            <span>
+                                <strong>Returns &amp; refunds</strong>
+                                <small>Return windows and process</small>
+                            </span>
+                            <b>Open</b>
+                        </a>
+
+                        <a href="404.html" class="resource-link">
+                            <span class="material-icons">handyman</span>
+                            <span>
+                                <strong>Furniture care</strong>
+                                <small>Materials, cleaning and upkeep</small>
+                            </span>
+                            <b>Open</b>
+                        </a>
+
+                        <a href="404.html" class="resource-link">
+                            <span class="material-icons">contact_support</span>
+                            <span>
+                                <strong>Contact support</strong>
+                                <small>Escalation and service hours</small>
+                            </span>
+                            <b>Open</b>
+                        </a>
+
+                    </aside>
+
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+                 9. STORE SETTINGS
+            =========================================== -->
+
+            <section class="admin-page" id="settings">
+
+                <div class="page-intro">
+                    <div>
+                        <span class="eyebrow">WORKSPACE PREFERENCES</span>
+                        <h2>Store settings</h2>
+                        <p>Review your store profile and account details.</p>
+                    </div>
+
+                    <span class="status-tag status-active">Local demo</span>
+                </div>
+
+                <div class="settings-grid">
+
+                    <!-- Store Profile -->
+
+                    <article class="panel settings-card">
+
+                        <div class="panel-heading">
+                            <div>
+                                <span class="eyebrow">STORE PROFILE</span>
+                                <h3>Furniture store identity</h3>
+                                <p>Sample business profile</p>
+                            </div>
+
+                            <span class="settings-icon material-icons">
+                                storefront
+                            </span>
+                        </div>
+
+                        <div class="settings-field">
+                            <label>Store name</label>
+                            <input value="Stackly Furniture" readonly>
+                        </div>
+
+                        <div class="settings-field">
+                            <label>Store email</label>
+                            <input value="hello@stackly.com" readonly>
+                        </div>
+
+                        <div class="settings-field">
+                            <label>Store category</label>
+                            <input value="Furniture & home living" readonly>
+                        </div>
+
+                        <a href="404.html" class="btn btn-outline">
+                            Edit store profile
+                        </a>
+
+                    </article>
+
+                    <!-- Admin Account -->
+
+                    <article class="panel settings-card">
+
+                        <div class="panel-heading">
+                            <div>
+                                <span class="eyebrow">ADMIN ACCOUNT</span>
+                                <h3>Your account</h3>
+                                <p>Account details from the login flow</p>
+                            </div>
+
+                            <span class="settings-icon material-icons">
+                                manage_accounts
+                            </span>
+                        </div>
+
+                        <div class="settings-field">
+                            <label>Display name</label>
+                            <input id="settingsName" value="Store Admin" readonly>
+                        </div>
+
+                        <div class="settings-field">
+                            <label>Account email</label>
+                            <input id="settingsEmail"
+                                   value="admin@stackly.com"
+                                   readonly>
+                        </div>
+
+                        <div class="settings-field">
+                            <label>Access level</label>
+                            <input value="Administrator" readonly>
+                        </div>
+
+                        <a href="404.html" class="btn btn-outline">
+                            Account preferences
+                        </a>
+
+                    </article>
+
+                    <!-- Store Policies -->
+
+                    <article class="panel settings-card">
+
+                        <div class="panel-heading">
+                            <div>
+                                <span class="eyebrow">STORE POLICIES</span>
+                                <h3>Customer-facing information</h3>
+                                <p>Keep important details easy to find.</p>
+                            </div>
+                        </div>
+
+                        <a href="404.html" class="resource-link">
+                            <span class="material-icons">local_shipping</span>
+                            <span>
+                                <strong>Shipping policy</strong>
+                                <small>Delivery areas and timelines</small>
+                            </span>
+                            <b>Open</b>
+                        </a>
+
+                        <a href="404.html" class="resource-link">
+                            <span class="material-icons">assignment_return</span>
+                            <span>
+                                <strong>Returns policy</strong>
+                                <small>Returns, exchanges and refunds</small>
+                            </span>
+                            <b>Open</b>
+                        </a>
+
+                        <a href="404.html" class="resource-link">
+                            <span class="material-icons">shield</span>
+                            <span>
+                                <strong>Privacy policy</strong>
+                                <small>Customer data and privacy</small>
+                            </span>
+                            <b>Open</b>
+                        </a>
+
+                    </article>
+
+                    <!-- Dashboard Preferences -->
+
+                    <article class="panel settings-card">
+
+                        <div class="panel-heading">
+                            <div>
+                                <span class="eyebrow">INTERFACE</span>
+                                <h3>Dashboard preferences</h3>
+                                <p>Visual demo controls</p>
+                            </div>
+                        </div>
+
+                        <label class="setting-toggle">
+                            <span>
+                                <strong>Compact data tables</strong>
+                                <small>Keep row spacing efficient</small>
+                            </span>
+                            <input type="checkbox" checked>
+                        </label>
+
+                        <label class="setting-toggle">
+                            <span>
+                                <strong>Show stock warnings</strong>
+                                <small>Keep low-stock reminders visible</small>
+                            </span>
+                            <input type="checkbox" checked>
+                        </label>
+
+                        <a href="404.html" class="btn btn-primary">
+                            Save preferences
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="main-footer">
+
+            <span>
+                © 2026 Stackly Furniture. All rights reserved.
+            </span>
+
+            <span>
+                Furniture store administration
+                <i></i>
+                <a href="404.html">Help &amp; support</a>
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- JavaScript -->
+
+<script src="js/admin-dashboard.js"></script>
+
+</body>
+</html>

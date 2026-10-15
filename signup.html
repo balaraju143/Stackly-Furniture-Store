@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#80694e">
+    <title>Signup | Stackly</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+
+<main class="signup-page">
+
+    <div class="signup-background-overlay"></div>
+
+    <header class="signup-topbar">
+        <a href="signup.html" class="signup-logo" aria-label="Stackly home">
+            <img src="assets/black-logo.webp" alt="Stackly">
+        </a>
+
+        <a href="index.html" class="signup-home-link">
+            <span class="material-symbols-outlined">arrow_back</span>
+            Back Home
+        </a>
+    </header>
+
+    <section class="signup-layout">
+
+        <div class="signup-intro">
+            <span class="signup-eyebrow">
+               
+                WELCOME TO STACKLY
+            </span>
+
+            <h1>Create your own <span>account</span></h1>
+
+            <p>
+                Stackly is here to support your requirements
+                every step of the way.
+            </p>
+        </div>
+
+        <div class="signup-card">
+
+            <div class="signup-card-heading">
+                <h2>Signup</h2>
+                <p>Create your account to get started.</p>
+            </div>
+
+            <form id="stacklySignupForm" novalidate>
+
+                <div class="signup-field">
+                    <label for="signupEmail">Email</label>
+                    <input
+                        type="email"
+                        id="signupEmail"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        aria-describedby="signupEmailError"
+                        required>
+                    <small class="signup-error" id="signupEmailError"></small>
+                </div>
+
+                <div class="signup-field">
+                    <label for="signupPassword">Password</label>
+
+                    <div class="signup-password-wrap">
+                        <input
+                            type="password"
+                            id="signupPassword"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="new-password"
+                            aria-describedby="signupPasswordError"
+                            required>
+
+                        <button type="button"
+                                class="signup-password-toggle"
+                                data-target="signupPassword"
+                                aria-label="Show password">
+                            <span class="material-symbols-outlined">visibility</span>
+                        </button>
+                    </div>
+
+                    <small class="signup-error" id="signupPasswordError"></small>
+                </div>
+
+                <div class="signup-field">
+                    <label for="signupConfirmPassword">Re-enter password</label>
+
+                    <div class="signup-password-wrap">
+                        <input
+                            type="password"
+                            id="signupConfirmPassword"
+                            name="confirmPassword"
+                            placeholder="Re-enter your password"
+                            autocomplete="new-password"
+                            aria-describedby="signupConfirmError"
+                            required>
+
+                        <button type="button"
+                                class="signup-password-toggle"
+                                data-target="signupConfirmPassword"
+                                aria-label="Show password">
+                            <span class="material-symbols-outlined">visibility</span>
+                        </button>
+                    </div>
+
+                    <small class="signup-error" id="signupConfirmError"></small>
+                </div>
+
+                <div class="signup-field">
+                    <label for="signupRole">Register as</label>
+
+                    <div class="signup-select-wrap">
+                        <span class="material-symbols-outlined">manage_accounts</span>
+
+                        <select id="signupRole" name="role" required
+                                aria-describedby="signupRoleError">
+                            <option value="">Select your role</option>
+                            <option value="client">Client</option>
+                            <option value="admin">Admin</option>
+                        </select>
+
+                        <span class="material-symbols-outlined signup-select-arrow">
+                            expand_more
+                        </span>
+                    </div>
+
+                    <small class="signup-error" id="signupRoleError"></small>
+                </div>
+
+                <label class="signup-terms">
+                    <input type="checkbox" id="signupTerms">
+                    <span>I agree to the <a href="404.html">Terms and Conditions</a></span>
+                </label>
+                <small class="signup-error signup-terms-error" id="signupTermsError"></small>
+
+                <div class="signup-form-message" id="signupFormMessage"
+                     role="status" aria-live="polite"></div>
+
+                <button type="submit" class="signup-submit-btn">
+                    Create Account
+                </button>
+
+                <div class="signup-divider">
+                    <span></span>
+                    <p>Or continue with</p>
+                    <span></span>
+                </div>
+
+                <div class="signup-social-buttons">
+                    <a href="404.html" class="signup-social-btn" aria-label="Continue with Apple">
+                        <i class="fa-brands fa-apple"></i>
+                        <span>Continue with Apple</span>
+                    </a>
+
+                    <a href="404.html" class="signup-social-btn" aria-label="Continue with Google">
+                        <i class="fa-brands fa-google"></i>
+                        <span>Continue with Google</span>
+                    </a>
+                </div>
+
+                <p class="signup-login-text">
+                    Already have an account?
+                    <a href="login.html">Login</a>
+                </p>
+
+            </form>
+        </div>
+    </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="js/signup.js"></script>
+</body>
+</html>

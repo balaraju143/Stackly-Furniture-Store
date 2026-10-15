@@ -1,0 +1,644 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Stackly Furniture | Modern Living</title>
+
+    <meta name="description" content="Discover elegant furniture and timeless designs for your home.">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap"
+      rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+
+
+<!-- Premium Stackly Page Loader -->
+<div class="stackly-loader" id="stacklyLoader">
+    <div class="loader-content">
+
+        <div class="loader-logo">
+    <img
+        src="assets/black-logo.webp"
+        alt="Stackly Furniture"
+        class="loader-logo-image"
+    >
+</div>
+
+        <div class="loader-visual">
+            <div class="loader-orbit orbit-one"></div>
+            <div class="loader-orbit orbit-two"></div>
+
+            <div class="loader-chair">
+                <span class="material-icons">weekend</span>
+            </div>
+
+            <span class="loader-spark spark-one">✦</span>
+            <span class="loader-spark spark-two">✧</span>
+            <span class="loader-spark spark-three">✦</span>
+        </div>
+
+        <h2 class="loader-title">Comfort in every detail</h2>
+        <p class="loader-subtitle">Preparing your space beautifully</p>
+
+        <div class="loader-progress">
+            <span id="loaderProgressBar"></span>
+        </div>
+
+        <div class="loader-bottom">
+            <span>THOUGHTFULLY DESIGNED</span>
+            <span id="loaderPercentage">00%</span>
+        </div>
+
+    </div>
+</div>
+
+
+
+    <!-- HEADER -->
+    <header class="navbar" id="navbar">
+
+        <!-- Logo -->
+        <a href="index.html" class="nav-logo" aria-label="Stackly Home">
+            <img
+                src="assets/black-logo.webp"
+                alt="Stackly Furniture"
+                class="logo-image"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex';">
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav" aria-label="Main navigation">
+            <ul class="nav-links">
+                <li><a href="index.html" data-page="home">Home</a></li>
+                <li><a href="shop.html" data-page="shop">Shop</a></li>
+                <li><a href="collections.html" data-page="collections">Collections</a></li>
+                <li><a href="inspiration.html" data-page="inspiration">Inspiration</a></li>
+                <li><a href="contact.html" data-page="contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Desktop Icons: Hidden on Mobile -->
+        <div class="nav-actions">
+            <a href="404.html" class="nav-icon" aria-label="Search">
+                <span class="material-symbols-outlined">search</span>
+            </a>
+
+            <a href="404.html" class="nav-icon" aria-label="Wishlist">
+                <span class="material-symbols-outlined">favorite_border</span>
+                <span class="icon-count">0</span>
+            </a>
+
+            <a href="404.html" class="nav-icon" aria-label="Shopping bag">
+                <span class="material-symbols-outlined">shopping_bag</span>
+                <span class="icon-count">0</span>
+            </a>
+
+            <a href="login.html" class="login-btn">Login</a>
+        </div>
+
+ <!-- Mobile Toggle -->
+       
+    <button
+    class="menu-toggle"
+    id="menuToggle"
+    type="button"
+    aria-label="Open navigation menu"
+    aria-controls="mobileMenu"
+    aria-expanded="false">
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+   </button>
+
+    </header>
+
+    <!-- MOBILE FULL-SCREEN MENU -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true" inert>
+
+        <nav class="mobile-nav" aria-label="Mobile navigation">
+
+            <ul class="mobile-menu-links">
+                <li><a href="index.html" data-page="home">Home</a></li>
+                <li><a href="shop.html" data-page="shop">Shop</a></li>
+                <li><a href="collections.html" data-page="collections">Collections</a></li>
+                <li><a href="inspiration.html" data-page="inspiration">Inspiration</a></li>
+                <li><a href="contact.html" data-page="contact">Contact</a></li>
+            </ul>
+
+            <a href="login.html" class="mobile-menu-login">Login</a>
+
+            <!-- Mobile menu icons -->
+            <div class="mobile-menu-icons">
+                <a href="404.html" aria-label="Search">
+                    <span class="material-symbols-outlined">search</span>
+                </a>
+
+                <a href="404.html" aria-label="Wishlist">
+                    <span class="material-symbols-outlined">favorite_border</span>
+                </a>
+
+                <a href="404.html" aria-label="Shopping bag">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                </a>
+            </div>
+
+        </nav>
+    </div>
+
+
+<!-- STACKLY CONTACT HERO -->
+<section class="contact-hero" id="contact-hero">
+
+    <div class="contact-hero-inner">
+
+        <div class="contact-hero-heading">
+            <span class="contact-hero-label">
+                WE'RE HERE TO HELP
+            </span>
+
+            <h1>
+                Let's Create a Space<br>
+                You'll Love.
+            </h1>
+        </div>
+
+        <div class="contact-hero-image-wrap">
+            <img
+                src="assets/contact-furniture.webp"
+                alt="Beautiful furniture collection featuring a bed, sofa, chairs and plants"
+                class="contact-hero-image"
+            >
+        </div>
+
+        <div class="contact-hero-bottom">
+
+            <p class="contact-hero-description">
+                Questions about a piece, help planning a room or a
+                delivery update? At <strong>Stackly</strong>, our
+                friendly design team is here to help. Tell us what
+                you need, and we'll help you create a home you love.
+            </p>
+
+            <a href="contact.html#contact-form"
+               class="contact-hero-button">
+                Send us a message
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STACKLY CONTACT INFORMATION -->
+<section class="stackly-contact-info" id="contact-info">
+
+    <div class="stackly-contact-inner">
+
+        <div class="stackly-contact-heading">
+            <span class="stackly-contact-label">
+                <span class="contact-label-dot"></span>
+                GET IN TOUCH
+            </span>
+
+            <h2>However you like to talk,<br>
+                <span>we are listening.</span>
+            </h2>
+
+            <p>
+                At <strong>Stackly</strong>, we're here to help.
+                Reach out to our team for product questions, orders,
+                design advice or anything else. We'll get back to you
+                as soon as possible.
+            </p>
+        </div>
+
+        <div class="stackly-contact-grid">
+
+            <!-- SALES -->
+            <a href="404.html"
+               class="stackly-contact-card contact-card-left">
+
+                <span class="material-symbols-outlined contact-card-icon">
+                    chat
+                </span>
+
+                <h3>Chat to sales</h3>
+                <span class="contact-card-line"></span>
+
+                <span class="contact-card-value">
+                    +91 98765 43210
+                </span>
+
+                <p>
+                    Get product details, pricing and expert advice
+                    from our sales team.
+                </p>
+            </a>
+
+            <!-- OFFICE -->
+            <a href="404.html"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="stackly-contact-card contact-card-right">
+
+                <span class="material-symbols-outlined contact-card-icon">
+                    location_on
+                </span>
+
+                <h3>Stackly Office</h3>
+                <span class="contact-card-line"></span>
+
+                <span class="contact-card-value contact-address">
+                    Krishi Cowork Space,<br>
+                    3rd Floor, 71/2-A, 71/2-B,<br>
+                    Ambathur, Venkatapuram,<br>
+                    Chennai - 600053
+                </span>
+
+                <p>
+                    Visit our workspace to connect with the Stackly team.
+                </p>
+            </a>
+
+            <!-- SUPPORT -->
+            <a href="404.html"
+               class="stackly-contact-card contact-card-left">
+
+                <span class="material-symbols-outlined contact-card-icon">
+                    mail
+                </span>
+
+                <h3>Chat to support</h3>
+                <span class="contact-card-line"></span>
+
+                <span class="contact-card-value contact-email">
+                    support@stackly.com
+                </span>
+
+                <p>
+                    Need help with an order, delivery update or product?
+                    We're here for you.
+                </p>
+            </a>
+
+            <!-- PHONE -->
+            <a href="404.html"
+               class="stackly-contact-card contact-card-right">
+
+                <span class="material-symbols-outlined contact-card-icon">
+                    call
+                </span>
+
+                <h3>Call us</h3>
+                <span class="contact-card-line"></span>
+
+                <span class="contact-card-value">
+                    Mon–Fri: 9am to 6pm<br>
+                    Sat: 10am to 4pm
+                </span>
+
+                <p>
+                    Speak directly with our team during working hours.
+                </p>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- STACKLY CONTACT FORM SECTION -->
+<section class="stackly-message-section" id="contact-form">
+
+    <div class="stackly-message-inner">
+
+        <!-- SECTION HEADING -->
+        <div class="stackly-message-heading">
+            <div class="stackly-message-title">
+                <span class="stackly-message-label">
+                    <span></span> LET'S CONNECT
+                </span>
+
+                <h2>Tell us what you have in mind.</h2>
+            </div>
+
+            <p class="stackly-message-intro">
+                A few details help us give you a useful answer the first
+                time. At <strong>Stackly</strong>, we're here to listen,
+                guide you and help you create a space that feels like home.
+            </p>
+        </div>
+
+        <!-- IMAGE + FORM -->
+        <div class="stackly-message-content">
+
+            <div class="stackly-message-visual">
+                <img
+                    src="assets/contact-interior.webp"
+                    alt="Interior design concept with a beautifully styled living room"
+                    class="stackly-message-image"
+                >
+            </div>
+
+            <div class="stackly-message-card">
+
+                <form id="stacklyContactForm" novalidate>
+
+                    <div class="stackly-form-field">
+                        <label for="contactName">Name *</label>
+                        <input
+                            type="text"
+                            id="contactName"
+                            name="name"
+                            placeholder="Enter your name"
+                            autocomplete="name"
+                            required
+                        >
+                        <small class="stackly-form-error" aria-live="polite"></small>
+                    </div>
+
+                    <div class="stackly-form-field">
+                        <label for="contactEmail">Email *</label>
+                        <input
+                            type="email"
+                            id="contactEmail"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required
+                        >
+                        <small class="stackly-form-error" aria-live="polite"></small>
+                    </div>
+
+                    <div class="stackly-form-field">
+                        <label for="contactPhone">Phone *</label>
+                        <input
+                            type="tel"
+                            id="contactPhone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            autocomplete="tel"
+                            inputmode="numeric"
+                            maxlength="10"
+                            required
+                        >
+                        <small class="stackly-form-error" aria-live="polite"></small>
+                    </div>
+
+                    <div class="stackly-form-field">
+                        <label for="contactMessage">Message *</label>
+                        <textarea
+                            id="contactMessage"
+                            name="message"
+                            placeholder="Enter your message"
+                            rows="4"
+                            required
+                        ></textarea>
+                        <small class="stackly-form-error" aria-live="polite"></small>
+                    </div>
+
+                    <button type="submit" class="stackly-message-submit">
+                        Send message
+                        
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- STACKLY LOCATION SECTION -->
+<section class="stackly-location" id="stackly-location">
+
+    <div class="stackly-location-heading gsap-map-heading">
+        <span class="stackly-location-label">OUR LOCATION</span>
+
+        <h2>Find Stackly <span>Here</span></h2>
+
+        <p>
+            Visit Stackly at Krishi Cowork Space in Chennai.
+            Whether you want to explore furniture, discuss your ideas,
+            or plan a beautiful interior, our team is here to help
+            you create a space that feels like home.
+        </p>
+    </div>
+
+    <div class="stackly-map-container gsap-map-container">
+
+       
+<div class="stackly-map-frame">
+    <a
+        href="404.html"
+        target="_blank"
+        rel="noopener noreferrer">
+        <img
+            src="assets/map (1).webp"
+            alt="Stackly Office Location - Chennai"
+            loading="lazy">
+    </a>
+</div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     STACKLY FURNITURE FOOTER
+========================================== -->
+
+<footer class="furniture-footer" id="furniture-footer">
+
+    <!-- Newsletter Section -->
+    <div class="footer-newsletter footer-reveal">
+
+        <div class="footer-newsletter-heading">
+            <h2>Bring Better Design<br>Home.</h2>
+        </div>
+
+        <div class="footer-newsletter-content">
+            <p class="footer-newsletter-description">
+                Join the letter for new collections, styling notes and
+                early access. Twice a month, never more.
+            </p>
+
+            <form class="footer-newsletter-form" id="footerNewsletter"
+                  novalidate>
+
+                <div class="footer-form-controls">
+                    <input
+                        type="email"
+                        id="footerEmail"
+                        name="email"
+                        placeholder="Your email address"
+                        aria-label="Your email address"
+                        autocomplete="email"
+                        required>
+
+                    <button type="submit" class="footer-subscribe-btn">
+                        Subscribe
+                    </button>
+                </div>
+
+                <p class="footer-form-message"
+                   id="footerFormMessage"
+                   role="alert"
+                   aria-live="polite"></p>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <!-- Main Footer Content -->
+    <div class="footer-main">
+
+        <!-- Brand -->
+        <div class="footer-brand footer-reveal">
+
+  <a href="index.html" class="footer-logo" aria-label="Stackly home">
+    <img
+        src="assets/black-logo.webp"
+        alt="Stackly"
+        class="footer-logo-image"
+    >
+   </a>
+            <p class="footer-brand-description">
+                Contemporary furniture, warmly made.<br>
+                Showroom open daily, 10am to 7pm.
+            </p>
+
+<div class="footer-socials">
+
+    <a href="404.html" class="footer-social footer-google"
+       aria-label="Google" title="Google">
+        <i class="fa-brands fa-google"></i>
+    </a>
+
+    <a href="404.html" class="footer-social footer-facebook"
+       aria-label="Facebook" title="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+    <a href="404.html" class="footer-social footer-instagram"
+       aria-label="Instagram" title="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="404.html" class="footer-social footer-x"
+       aria-label="X" title="X">
+        <i class="fa-brands fa-x-twitter"></i>
+    </a>
+
+</div>
+
+ </div>
+
+        <!-- Main Links -->
+        <nav class="footer-column footer-reveal"
+             aria-label="Main links">
+
+            <h3>Links</h3>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="inspiration.html">Inspiration</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Help Links -->
+        <nav class="footer-column footer-reveal"
+             aria-label="Customer help">
+
+            <h3>Help</h3>
+
+            <ul>
+                <li><a href="404.html">Shipping</a></li>
+                <li><a href="404.html">Returns</a></li>
+                <li><a href="404.html">Skin consultation</a></li>
+                <li><a href="404.html">Gift cards</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contact Details -->
+        <div class="footer-contact footer-reveal">
+
+            <h3>Contact us</h3>
+
+            <address>
+                Evolve Studio, 4th Floor,<br>
+                Khata No 10, Begur - Koppa Rd,<br>
+                In front of SNN Raj Serenity,<br>
+                Suraksha Nagar, Yelenahalli,<br>
+                Begur, Bengaluru,<br>
+                Karnataka - 560068
+            </address>
+
+           <a href="404.html" class="footer-contact-link">
+    <span class="material-icons" aria-hidden="true">mail</span>
+    <span>info@stackly.com</span>
+</a>
+
+<a href="404.html" class="footer-contact-link">
+    <span class="material-icons" aria-hidden="true">call</span>
+    <span>+91 98765 43210</span>
+</a>
+        </div>
+
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom footer-reveal">
+
+        <p class="footer-copyright">
+            © 2026 Stackly. All rights reserved.
+        </p>
+
+        <nav class="footer-legal" aria-label="Legal links">
+            <a href="404.html">Terms of Service <span>›</span></a>
+            <a href="404.html">Privacy Policy <span>›</span></a>
+            <a href="404.html">Cookie Policy <span>›</span></a>
+        </nav>
+
+    </div>
+
+</footer>
+
+
+    <!-- JavaScript -->
+     
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.2/gsap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+
+</body>
+</html>
